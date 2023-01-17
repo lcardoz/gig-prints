@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  band: one
+  designer: one
+  image: MyString
+  date: MyString
+  venue: MyString
+  location: MyString
+  edition: 1
+  status: MyString
+  duedate: MyString
+  budget: MyString
+  dimensions: MyString
+
+two:
+  band: two
+  designer: two
+  image: MyString
+  date: MyString
+  venue: MyString
+  location: MyString
+  edition: 1
+  status: MyString
+  duedate: MyString
+  budget: MyString
+  dimensions: MyString
