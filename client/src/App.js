@@ -9,7 +9,8 @@ import Signup from './Signup';
 import SignupBand from './SignupBand';
 import SignupDesigner from './SignupDesigner';
 import Profile from './Profile';
-import Projects from './Projects';
+import BandProjects from './BandProjects';
+import DesignerProjects from './DesignerProjects';
 
 function App() {
 
@@ -39,22 +40,23 @@ function App() {
         res.json()
         .then(band => {
           setBand(band)
+          // setPosters(band.posters)
         })
         }
       })
   },[update])
 
-  // useEffect(() => {
-  //   fetch("/posters")
-  //   .then(res => {
-  //     if(res.ok){
-  //       res.json()
-  //       .then(posters => {
-  //         setPosters(posters)
-  //         // console.log(posters)
-  //       })
-  //     }})
-  // },[])
+  useEffect(() => {
+    fetch("/posters")
+    .then(res => {
+      if(res.ok){
+        res.json()
+        .then(posters => {
+          setPosters(posters)
+          // console.log(posters)
+        })
+      }})
+  },[])
 
   if (errors) return <h1>{errors}</h1>
 
@@ -70,7 +72,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         {band || designer ? <Route path="/bands/:id" element={<Profile band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} />} /> : null}
         {band || designer ? <Route path="/designers/:id" element={<Profile band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} />} /> : null}
-        {band || designer ? <Route path="/projects" element={<Projects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
+        {band || designer ? <Route path="/bands/:id/projects" element={<BandProjects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
+        {band || designer ? <Route path="/designers/:id/projects" element={<DesignerProjects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
         <Route path= "/" element={<Home band={band} designer={designer} /> }/>
       </Routes>
     </div>

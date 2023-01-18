@@ -8,7 +8,6 @@ class DesignersController < ApplicationController
 
   def show
     designer = Designer.find_by(id: session[:user_id])
-    render json: designer, status: :ok
     if designer
       render json: designer, status: :ok
     else

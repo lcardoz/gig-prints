@@ -1,17 +1,25 @@
 import React from 'react';
 import {Image, Grid, Card } from 'semantic-ui-react';
 
-const DesignerPosterCard = ({designer}) => {
+const DesignerPosterCard = ({designer, posters}) => {
 
   // console.log(designer.completed_posters)
 
   const cardsPerRow = 3;
 
+  const completedDesignerPosters = posters.filter((poster) => {
+    return (
+      (poster.designer_id === designer.id) && (poster.status === "complete")
+    )
+  })
+
+  // console.log(completedDesignerPosters)
+
   return (
     // <div>DesignerPosterCard</div>
     <>
     <Grid columns={cardsPerRow}>
-      {designer.completed_posters.map((completedPoster) => (
+      {completedDesignerPosters.map((completedPoster) => (
         <Grid.Column key={completedPoster.id} >
           <Card centered>
             {/* <img 

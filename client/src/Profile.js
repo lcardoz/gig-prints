@@ -16,6 +16,17 @@ const Profile = ({band, designer, posters, setPosters}) => {
   //   fetch("/posters")
   // }, [])
 
+  const unassignedBandPosters = posters.filter((poster) => {
+    if(band)
+    return (
+      (poster.band_id === band.id) && (poster.status === "unassigned")
+    )
+    else 
+    return null
+  })
+
+  // console.log(unassignedBandPosters)
+
   if (band) {
   return (
     <>
@@ -40,6 +51,7 @@ const Profile = ({band, designer, posters, setPosters}) => {
         <br />
         <Divider horizontal style={{ fontSize: 20}}>Open Poster Commissions</Divider>  
         <br />
+        {unassignedBandPosters.length > 0 ? 
         <Table celled padded>
           <Table.Header style={{fontSize: 18, textAlign: "center"}}>
             <Table.Row>
@@ -50,20 +62,26 @@ const Profile = ({band, designer, posters, setPosters}) => {
             </Table.Row>
           </Table.Header>
           <Table.Body style={{fontSize: 18, textAlign: "center"}}>
-            {band.unassigned_posters.map((eachPoster, index) => (
-                <Table.Row key={index}>
-                  <Table.Cell>{eachPoster.date}</Table.Cell>
-                  <Table.Cell>{eachPoster.venue}</Table.Cell>
-                  <Table.Cell>{eachPoster.location}</Table.Cell>
-                  <Table.Cell>{eachPoster.duedate}</Table.Cell>
-                </Table.Row>
+            {unassignedBandPosters.map((eachPoster, index) => (
+              <Table.Row key={index}>
+                <Table.Cell>{eachPoster.date}</Table.Cell>
+                <Table.Cell>{eachPoster.venue}</Table.Cell>
+                <Table.Cell>{eachPoster.location}</Table.Cell>
+                <Table.Cell>{eachPoster.duedate}</Table.Cell>
+              </Table.Row>
             ))}
           </Table.Body>
-        </Table>
+        </Table>          
+        : <>
+            <p style={{fontStyle:"italic"}}>
+              No open poster commissions at the moment.
+            </p>
+          </>
+        }
         <br />
         <Divider horizontal style={{ fontSize: 20}}>Recent Concert Posters</Divider>  
         <br />
-        <BandPosterCard band={band} />
+        <BandPosterCard band={band} posters={posters} />
         <br />
       </Segment>
       </>
@@ -92,7 +110,7 @@ const Profile = ({band, designer, posters, setPosters}) => {
           <br />
           <Divider horizontal style={{ fontSize: 20}}>Recent Concert Posters</Divider>  
           <br />
-          <DesignerPosterCard designer={designer} />
+          <DesignerPosterCard designer={designer} posters={posters} />
           <br />
         </Segment>
       </>

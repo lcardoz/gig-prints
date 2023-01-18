@@ -8,7 +8,6 @@ class BandsController < ApplicationController
 
   def show
     band = Band.find_by(id: session[:user_id])
-    render json: band, status: :ok
     if band
       render json: band, status: :ok
     else

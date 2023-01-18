@@ -1,14 +1,11 @@
 class PostersController < ApplicationController
+  wrap_parameters format: []
 
   skip_before_action :authorize, only: [:index]
 
-  # NEED: 
-  # get all completed posters (status: complete) of a designer on their profile
-  # get all posters of a band in 'my projects'
-  # get all posters of a designer in 'my projects'
-  # get unassigned posters (status: unassigned) of a band on their profile in 'open projects'
-
-
+  def index
+    render json: Poster.all, status: :ok
+  end
 
   # def index
   #   render json: Poster.all, status: :ok

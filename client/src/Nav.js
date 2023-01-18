@@ -39,7 +39,7 @@ function Nav({band, setBand, designer, setDesigner}) {
       <Dropdown item icon='bars' style={{ fontSize: 24 }} >
         <Dropdown.Menu direction="left">
           <Dropdown.Item as={Link} to={`/bands/${band.id}`} icon='user' text='My Profile' />
-          <Dropdown.Item as={Link} to={`/projects`} icon='tasks' text='My Projects' />
+          <Dropdown.Item as={Link} to={`/bands/${band.id}/projects`} icon='tasks' text='My Projects' />
           <Dropdown.Item icon='inbox' text='My Inbox' />
           <Segment basic textAlign={"center"}>
             <Button onClick={handleLogout} style={{ fontSize: 24, textAlign: "center"}} >Logout</Button>
@@ -64,7 +64,7 @@ function Nav({band, setBand, designer, setDesigner}) {
       <Dropdown item icon='bars' style={{ fontSize: 24 }} >
         <Dropdown.Menu direction="left">
           <Dropdown.Item as={Link} to={`/designers/${designer.id}`}icon='user' text='My Profile' />
-          <Dropdown.Item as={Link} to={`/projects`} icon='tasks' text='My Projects' />
+          <Dropdown.Item as={Link} to={`/designers/${designer.id}/projects`} icon='tasks' text='My Projects' />
           <Dropdown.Item icon='inbox' text='My Inbox' />
           <Segment basic textAlign={"center"}>
             <Button onClick={handleLogout} style={{ fontSize: 24, textAlign: "center"}} >Logout</Button>
