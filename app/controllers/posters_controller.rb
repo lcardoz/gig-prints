@@ -25,6 +25,12 @@ class PostersController < ApplicationController
     render json: poster, status: :created
   end
 
+  def update
+    poster = Poster.find(params[:id])
+    poster.update!(poster_params)
+    render json: poster, status: :accepted
+  end
+
   def destroy
     poster = Poster.find(params[:id])
     poster.destroy
@@ -35,7 +41,7 @@ class PostersController < ApplicationController
   private
 
   def poster_params
-    params.permit(:band_id, :designer_id, :image, :date, :venue, :location, :edition, :status, :duedate, :budget, :dimensions)
+    params.permit(:id, :band_id, :designer_id, :image, :date, :venue, :location, :edition, :status, :duedate, :budget, :dimensions, :band)
   end
 
 end
