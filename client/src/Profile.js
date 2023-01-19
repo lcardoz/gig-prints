@@ -12,10 +12,6 @@ const Profile = ({band, designer, posters, setPosters}) => {
 
   // console.log(band.completed_posters)
 
-  // useEffect(()=>{
-  //   fetch("/posters")
-  // }, [])
-
   const unassignedBandPosters = posters.filter((poster) => {
     if(band)
     return (
@@ -40,7 +36,8 @@ const Profile = ({band, designer, posters, setPosters}) => {
           </Grid.Column>
           <Grid.Column>
           {band.on_tour ? <p>✅ on tour! </p> : null}
-            <p>IG: {band.instagram}</p>
+          {band.instagram ? <p>IG: {band.instagram}</p> : null}
+            
             <a href={band.website} alt="website">{band.name}'s Website</a>
             <br />
             <br />

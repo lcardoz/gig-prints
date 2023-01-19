@@ -63,8 +63,6 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
 		const key= e.target.name;
 		const value = e.target.value;
 
-    
-
     setNewProjectFormData({
       ...newProjectFormData,
       [key]: value
@@ -157,10 +155,6 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
       // console.log(newPosters)
       // console.log("saved!")
     })
-
-    
-    // setNewProjectFormData(newProjectFormData)
-    
   }
 
   const handleDelete = (id) => {
@@ -178,15 +172,14 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
       // console.log(newProjectFormData)
       // console.log(activePosters)
       // console.log("deleted!")
-    })
-    
+    }) 
   }
   
 
   return (
     <>
       <Header style={{ fontSize: 24, textAlign: "center"}}>MY PROJECTS</Header>
-      <Table celled >
+      <Table celled>
       <Table.Header style={{textAlign: "center"}}>
         <Table.Row>
           <Table.HeaderCell singleLine>Concert Date</Table.HeaderCell>
@@ -196,7 +189,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
           <Table.HeaderCell singleLine>Edition Size</Table.HeaderCell>
           <Table.HeaderCell singleLine>Dimensions</Table.HeaderCell>
           <Table.HeaderCell singleLine>Budget</Table.HeaderCell>
-          <Table.HeaderCell>Image Link</Table.HeaderCell>
+          <Table.HeaderCell singleLine>Image Link</Table.HeaderCell>
           <Table.HeaderCell singleLine>Due Date</Table.HeaderCell>
           <Table.HeaderCell singleLine>Status</Table.HeaderCell>
           <Table.HeaderCell singleLine>Update Project</Table.HeaderCell>
