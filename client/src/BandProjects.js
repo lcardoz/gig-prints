@@ -178,7 +178,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
 
   return (
     <>
-      <Header style={{ fontSize: 24, textAlign: "center"}}>MY PROJECTS</Header>
+      <Header style={{fontSize: 24, textAlign: "center"}}>MY PROJECTS</Header>
       <Table celled>
       <Table.Header style={{textAlign: "center"}}>
         <Table.Row>

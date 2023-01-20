@@ -17,7 +17,7 @@ const Home = ({band, designer}) => {
   } else {
     return (
       <div>
-        <h2>Welcome, to the homepage!</h2>
+        <h2>Welcome, Please Login or Signup!</h2>
       </div>
     )
   }

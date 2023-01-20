@@ -16,7 +16,6 @@ const DesignerPosterCard = ({designer, posters}) => {
   // console.log(completedDesignerPosters)
 
   return (
-    // <div>DesignerPosterCard</div>
     <>
     <Grid columns={cardsPerRow}>
       {completedDesignerPosters.map((completedPoster) => (
