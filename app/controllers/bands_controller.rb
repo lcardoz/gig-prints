@@ -7,7 +7,7 @@ class BandsController < ApplicationController
   end
 
   def show
-    band = Band.find_by(id: session[:user_id])
+    band = Band.find_by(id: session[:band_id])
     if band
       render json: band, status: :ok
     else
@@ -21,7 +21,7 @@ class BandsController < ApplicationController
   end
 
   def update
-    band = Band.find_by(id: session[:user_id])
+    band = Band.find_by(id: session[:band_id])
     bandr.update!(band_params)
     render json: band, status: :accepted
   end

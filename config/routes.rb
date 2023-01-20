@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   post '/login/band', to: "sessions#create_band_session"
   post '/login/designer', to: "sessions#create_designer_session"
 
-  get '/authorized/band', to: "bands#show"
-  get '/authorized/designer', to: "designers#show"
+  # get '/authorized/band', to: "bands#show"
+  # get '/authorized/designer', to: "designers#show"
+  get '/authorized', to: "sessions#show"
 
   delete '/logout', to: "sessions#destroy"
 

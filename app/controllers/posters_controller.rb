@@ -1,6 +1,7 @@
 class PostersController < ApplicationController
   wrap_parameters format: []
 
+  # do i want this?
   skip_before_action :authorize, only: [:index]
 
   def index

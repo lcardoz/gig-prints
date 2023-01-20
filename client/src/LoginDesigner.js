@@ -70,4 +70,4 @@ const LoginDesigner = ({setDesigner}) => {
   )
 }
 
-export default LoginDesigner
+export default LoginDesigner;

@@ -22,29 +22,35 @@ function App() {
   const [update, setUpdate] = useState(true)
 
   useEffect(() => {
-    fetch("/authorized/designer")
+    fetch("/authorized")
     .then(res => {
       if(res.ok){
-      res.json()
-      .then(designer => {
-        setDesigner(designer)
-      })
+        res.json()
+        .then(someUserData => {
+          if("on_tour" in someUserData) {
+            setBand(someUserData)
+          } else if ("open_to_work" in someUserData) {
+            setDesigner(someUserData)
+          } else {
+            console.error("useEffect error")
+          }
+        })
       }
     })
-  },[update])
+  },[])
 
-  useEffect(() => {
-      fetch("/authorized/band")
-      .then(res => {
-        if(res.ok){
-        res.json()
-        .then(band => {
-          setBand(band)
-          // setPosters(band.posters)
-        })
-        }
-      })
-  },[update])
+  // useEffect(() => {
+  //     fetch("/authorized/band")
+  //     .then(res => {
+  //       if(res.ok){
+  //       res.json()
+  //       .then(band => {
+  //         setBand(band)
+  //         // setPosters(band.posters)
+  //       })
+  //       }
+  //     })
+  // },[])
 
   useEffect(() => {
     fetch("/posters")

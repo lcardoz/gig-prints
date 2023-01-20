@@ -19,6 +19,19 @@ class ApplicationController < ActionController::API
   end
 
   def authorize
-    render json: { error: "Not Authorized" }, status: :unauthorized unless session.include? :user_id
+    unless current_band || current_designer
+       render json: { error: "Not Authorized" }, status: :unauthorized
+    end
+    # render json: { error: "Not Authorized" }, status: :unauthorized unless session.include? :designer_id
+    # took out :band_id || for authorize
   end
+
+  def current_band
+    @current_band ||= Band.find(session[:band_id])
+  end
+
+  def current_designer
+    @current_designer ||= Designer.find(session[:designer_id])
+  end
+
 end
