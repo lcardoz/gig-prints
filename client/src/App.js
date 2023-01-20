@@ -24,6 +24,9 @@ function App() {
 
   const [update, setUpdate] = useState(true)
 
+  console.log("band:", band)
+  console.log("›designer:", designer)
+
   useEffect(() => {
     fetch("/authorized/designer")
     .then(res => {

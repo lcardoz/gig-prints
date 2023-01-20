@@ -1,5 +1,5 @@
 class DesignerSerializer < ActiveModel::Serializer
-  attributes :id, :name, :username, :password_digest, :instagram, :website, :location, :image, :bio, :open_to_work
+  attributes :id, :name, :username, :instagram, :website, :location, :image, :bio, :open_to_work
   # has_many :posters
 
   # def completed_posters

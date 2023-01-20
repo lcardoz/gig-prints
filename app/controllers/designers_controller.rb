@@ -7,12 +7,8 @@ class DesignersController < ApplicationController
   end
 
   def show
-    designer = Designer.find_by(id: session[:user_id])
-    if designer
-      render json: designer, status: :ok
-    else
-      render json: { error: "Not Authorized" }, status: :unauthorized
-    end
+    designer = Designer.find_by(id: session[:designer_id])
+    render json: designer, status: :ok
   end
 
   def create
@@ -21,7 +17,7 @@ class DesignersController < ApplicationController
   end
 
   def update
-    designer = Designer.find_by(id: session[:user_id])
+    designer = Designer.find_by(id: session[:designer_id])
     designer.update!(designer_params)
     render json: designer, status: :accepted
   end

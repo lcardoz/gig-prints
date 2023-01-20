@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create_band_session
     band = Band.find_by(username: params[:username])
     if band&.authenticate(params[:password])
-      session[:user_id] = band.id
+      session[:band_id] = band.id
       render json: band, status: :created
     else
       render json: { error: "Invalid username or password" }, status: :unauthorized
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
   def create_designer_session
     designer = Designer.find_by(username: params[:username])
     if designer&.authenticate(params[:password])
-      session[:user_id] = designer.id
+      session[:designer_id] = designer.id
       render json: designer, status: :created
     else
       render json: { error: "Invalid username or password" }, status: :unauthorized
@@ -23,7 +23,12 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete :user_id
+    # session.delete :user_id
+    if(session[:band_id])
+      session.delete :band_id
+    else
+      session.delete :designer_id
+    end
     head :no_content
   end
 

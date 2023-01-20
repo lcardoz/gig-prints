@@ -1,5 +1,5 @@
 class BandSerializer < ActiveModel::Serializer
-  attributes :id, :name, :username, :password_digest, :instagram, :website, :location, :image, :bio, :on_tour 
+  attributes :id, :name, :username, :instagram, :website, :location, :image, :bio, :on_tour 
   # has_many :posters
 
   # def completed_posters

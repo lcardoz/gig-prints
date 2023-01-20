@@ -7,12 +7,8 @@ class BandsController < ApplicationController
   end
 
   def show
-    band = Band.find_by(id: session[:user_id])
-    if band
-      render json: band, status: :ok
-    else
-      render json: { error: "Not Authorized" }, status: :unauthorized
-    end
+    band = Band.find_by(id: session[:band_id])
+    render json: band, status: :ok
   end
 
   def create
@@ -21,7 +17,7 @@ class BandsController < ApplicationController
   end
 
   def update
-    band = Band.find_by(id: session[:user_id])
+    band = Band.find_by(id: session[:band_id])
     band.update!(band_params)
     render json: band, status: :accepted
   end
