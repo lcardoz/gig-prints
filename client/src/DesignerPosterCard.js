@@ -3,8 +3,6 @@ import {Image, Grid, Card } from 'semantic-ui-react';
 
 const DesignerPosterCard = ({designer, posters}) => {
 
-  // console.log(designer.completed_posters)
-
   const cardsPerRow = 3;
 
   const completedDesignerPosters = posters.filter((poster) => {
@@ -17,15 +15,10 @@ const DesignerPosterCard = ({designer, posters}) => {
 
   return (
     <>
-    <Grid columns={cardsPerRow}>
+    <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
       {completedDesignerPosters.map((completedPoster) => (
         <Grid.Column key={completedPoster.id} >
           <Card centered>
-            {/* <img 
-              className='card-image'
-              src={completedPoster.image}
-              alt={completedPoster.band.name}
-            /> */}
             <Image src={completedPoster.image} />
             <Card.Content>
               <Card.Header>

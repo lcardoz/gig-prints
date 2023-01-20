@@ -13,6 +13,7 @@ import DesignerProfile from './DesignerProfile';
 import BandProjects from './BandProjects';
 import DesignerProjects from './DesignerProjects';
 import EditBandProfile from './EditBandProfile';
+import EditDesignerProfile from './EditDesignerProfile';
 
 function App() {
 
@@ -76,6 +77,7 @@ function App() {
         {band ? <Route path="/bands/:id/projects" element={<BandProjects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
         {designer ? <Route path="/designers/:id/projects" element={<DesignerProjects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
         {band ? <Route path="/bands/:id/edit-profile" element={<EditBandProfile band={band} setBand={setBand} />} /> : null}
+        {designer ? <Route path="/designers/:id/edit-profile" element={<EditDesignerProfile designer={designer} setDesigner={setDesigner} />} /> : null}
         <Route path= "/" element={<Home band={band} designer={designer} /> } />
       </Routes>
     </div>

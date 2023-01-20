@@ -1,24 +1,37 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { Divider, Grid, Header, Image } from 'semantic-ui-react';
 
 const Home = ({band, designer}) => {
 
+  useEffect(() => {
+    fetch("/designers")
+    .then(res => {
+      if(res.ok){
+        res.json()
+        .then(allDesigners => {
+          console.log(allDesigners)
+          // console.log(posters)
+        })
+      }})
+  },[])
+
   if (band) {
     return (
-      <div>
-        <h2>Welcome, {band.name}!</h2>
-      </div>
+      <>
+        <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>{band.name}!</i></Header> 
+      </>
     )
   } else if (designer) {
     return (
-      <div>
-        <h2>Welcome, {designer.name}!</h2>
-      </div>
+      <>
+        <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>{designer.name}!</i></Header> 
+      </>
     )
   } else {
     return (
-      <div>
-        <h2>Welcome, Please Login or Signup!</h2>
-      </div>
+      <>
+        <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>please login or signup to begin!</i></Header>
+      </>
     )
   }
 

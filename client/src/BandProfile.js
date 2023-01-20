@@ -1,33 +1,22 @@
-import React, {useState} from 'react';
-import { useParams } from 'react-router-dom'
-import { Divider, Table, Input, Form, Grid, Button, Header, Image, Segment } from 'semantic-ui-react';
+import React from 'react';
+// import { useParams } from 'react-router-dom'
+import { Divider, Table, Grid, Header, Image } from 'semantic-ui-react';
 import BandPosterCard from './BandPosterCard';
 
-const BandProfile = ({band, designer, posters, setPosters}) => {
-
-  // console.log(band)
-  // console.log(designer)
-  const { id } = useParams()
-
-  // console.log(band.completed_posters)
+const BandProfile = ({band, posters}) => {
 
   const unassignedBandPosters = posters.filter((poster) => {
-    if(band)
     return (
       (poster.band_id === band.id) && (poster.status === "unassigned")
     )
-    else 
-    return null
   })
 
+  // console.log(band)
+  // const { id } = useParams()
   // console.log(unassignedBandPosters)
-
- 
-
 
   return (
     <>
-      {/* <Segment style={{fontSize: 24, textAlign: "center"}}> */}
         <br />
         <Header style={{fontSize: 30, textAlign: "center"}}>{band.name.toUpperCase()}</Header> 
         <Grid columns={2} relaxed='very' style={{margin:"2%", fontSize: 20, textAlign: "center"}}>
@@ -77,9 +66,9 @@ const BandProfile = ({band, designer, posters, setPosters}) => {
         <br />
         <Divider horizontal style={{ fontSize: 20}}>Recent Concert Posters</Divider>  
         <br />
+        <br />
         <BandPosterCard band={band} posters={posters} />
         <br />
-      {/* </Segment> */}
     </>
   )
 }

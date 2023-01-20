@@ -2,26 +2,26 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import { Divider, Form, Input, Button } from 'semantic-ui-react';
 
-const EditBandProfile = ({band, setBand}) => {
+const EditDesignerProfile = ({designer, setDesigner}) => {
 
   let navigate = useNavigate();  
 
-  const [updatedBandInfo, setUpdatedBandInfo] = useState({
-    image: band.image,
-    location: band.location,
-    instagram: band.instagram,
-    website: band.website,
-    bio: band.bio,
-    on_tour: band.on_tour
+  const [updatedDesignerInfo, setUpdatedDesignerInfo] = useState({
+    image: designer.image,
+    location: designer.location,
+    instagram: designer.instagram,
+    website: designer.website,
+    bio: designer.bio,
+    open_to_work: designer.open_to_work
   })
-  
+
   const handleChange = (e) => {
     const key= e.target.name;
     const value = e.target.value;
     // const checked = e.target.checked;
 
-    setUpdatedBandInfo({
-      ...updatedBandInfo,
+    setUpdatedDesignerInfo({
+      ...updatedDesignerInfo,
       [key]: value
     })
     // console.log(key, value)
@@ -30,8 +30,8 @@ const EditBandProfile = ({band, setBand}) => {
   const handleCheck = (e, {name, checked}) => {
     // const key= e.target.name;
     // const checked = e.target.checked;
-    setUpdatedBandInfo({
-      ...updatedBandInfo,
+    setUpdatedDesignerInfo({
+      ...updatedDesignerInfo,
       [name]: checked
     })
     // console.log(`Key: ${name}, Value: ${checked}`)
@@ -41,37 +41,37 @@ const EditBandProfile = ({band, setBand}) => {
     e.preventDefault()
 
     console.log('clicked submit')
-    console.log(updatedBandInfo)
+    console.log(updatedDesignerInfo)
 
-    fetch(`/bands/${band.id}`, {
+    fetch(`/designers/${designer.id}`, {
       method: 'PATCH',
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(updatedBandInfo)
+      body: JSON.stringify(updatedDesignerInfo)
     })
     .then(res => res.json())
-    .then(updatedBand => {
-      setBand(updatedBand)
-      navigate(`/bands/${band.id}`)
+    .then(updatedDesigner => {
+      setDesigner(updatedDesigner)
+      navigate(`/designers/${designer.id}`)
     })
   }
 
   return (
-    <div >
+    <div>
       <br />
       <Divider horizontal style={{fontSize: 20}}>Edit Profile</Divider>  
       <br />
         <Form onSubmit={handleSubmit} style={{width: "50%", margin: "0 auto"}}>
         <Form.Checkbox 
-          label='On Tour'
-          name="on_tour"
-          checked={updatedBandInfo.on_tour}
+          label='Open To Work'
+          name="open_to_work"
+          checked={updatedDesignerInfo.open_to_work}
           onChange={handleCheck}
         />
           <Form.Field>
             <label>Profile Picture</label>
             <Input fluid
               name="image"
-              value={updatedBandInfo.image}
+              value={updatedDesignerInfo.image}
               onChange={handleChange}
             />
           </Form.Field>
@@ -79,7 +79,7 @@ const EditBandProfile = ({band, setBand}) => {
             <label>Location</label>
             <Input fluid
               name="location"
-              value={updatedBandInfo.location}
+              value={updatedDesignerInfo.location}
               onChange={handleChange}
             />
           </Form.Field>
@@ -87,7 +87,7 @@ const EditBandProfile = ({band, setBand}) => {
             <label>Instagram</label>
             <Input fluid
               name="instagram"
-              value={updatedBandInfo.instagram}
+              value={updatedDesignerInfo.instagram}
               onChange={handleChange}
             />
           </Form.Field>
@@ -95,14 +95,14 @@ const EditBandProfile = ({band, setBand}) => {
             <label>Website</label>
             <Input fluid
               name="website"
-              value={updatedBandInfo.website}
+              value={updatedDesignerInfo.website}
               onChange={handleChange}
             />
           </Form.Field>
           <Form.TextArea 
             label='Bio'  
             name="bio"
-            value={updatedBandInfo.bio}
+            value={updatedDesignerInfo.bio}
             onChange={handleChange}
           />        
           <br/>
@@ -116,4 +116,4 @@ const EditBandProfile = ({band, setBand}) => {
   )
 }
 
-export default EditBandProfile;
+export default EditDesignerProfile;

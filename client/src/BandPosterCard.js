@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image, Grid, Card } from 'semantic-ui-react';
 
-
 const BandPosterCard = ({band, posters}) => {
 
   const cardsPerRow = 3;
@@ -20,11 +19,6 @@ const BandPosterCard = ({band, posters}) => {
         {completedBandPosters.map((completedPoster) => (
           <Grid.Column key={completedPoster.id} >
             <Card centered>
-              {/* <img 
-                className='card-image'
-                src={completedPoster.image}
-                alt={completedPoster.designer.name}
-              /> */}
               <Image src={completedPoster.image} />
               <Card.Content>
                 <Card.Header>
