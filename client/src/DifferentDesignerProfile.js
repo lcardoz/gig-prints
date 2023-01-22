@@ -15,7 +15,7 @@ const DifferentDesignerProfile = ({posters}) => {
       )
   },[id])
 
-  console.log(differentDesigner)
+  // console.log(differentDesigner)
 
   const cardsPerRow = 3;
 

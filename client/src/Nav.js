@@ -25,17 +25,6 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
     }})
   }  
 
-  // const handleDesignerClick = (e, result) => {
-  //   navigate(`/designers/${result.id}`)
-  //   // console.log(result)
-  //   // setDifferentUser(result)
-  // }
-  // const handleBandClick = (e, result) => {
-  //   navigate(`/bands/${result.id}`)
-  //   // console.log(result)
-  //   // setDifferentUser(result)
-  // }
-
   if (band) {
     return (
       <Menu secondary pointing>
@@ -58,8 +47,9 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
             <div style={{ position: "absolute"}}>
               {searchedDesigners.map(result => (
                 <Card 
-                // onClick={handleDesignerClick}
                 as={Link} to={`/designers/${result.id}`} 
+                onClick={() => {
+                  setSearch("")}}
                 style={{border: "1px solid black", margin: "0px", borderRadius: "2px", padding: "5px", backgroundColor:"white", width: "300px"}} key={result.id}>
                   {result.name}
                 </Card>
@@ -102,8 +92,9 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
             <div style={{ position: "absolute"}}>
               {searchedBands.map(result => (
                 <Card 
-                // onClick={handleBandClick}
-                as={Link} to={`/bands/${result.id}`} 
+                as={Link} to={`/bands/${result.id}`}
+                onClick={() => {
+                  setSearch("")}} 
                 style={{width: "300px", margin: "0px", padding:"5px", border: "1px solid black", borderRadius: "2px", backgroundColor:"white"}} key={result.id}>
                   {result.name}
                 </Card>
