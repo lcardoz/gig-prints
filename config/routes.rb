@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   resources :chats, only: [:index, :show, :create]
 
   resources :posters, except: [:show]
-  resources :designers, only: [:index, :show, :create, :update]
-  resources :bands, only: [:index, :show, :create, :update]
+  resources :designers, only: [:index, :create, :update]
+  resources :bands, only: [:index, :create, :update]
+
+  get "/bands/:id", to: 'bands#show_different_band'
+  get "/designers/:id", to: 'designers#show_different_designer'
 
   post '/signup/band', to: "bands#create"
   post '/signup/designer', to: "designers#create"

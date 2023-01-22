@@ -3,7 +3,7 @@ import { NavLink, Link, useNavigate} from "react-router-dom";
 import { Input, Card, Menu, Image, Dropdown, Button, Segment } from 'semantic-ui-react';
 import logo_image from "./logopic.png";
 
-function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigners, allBands, setAllBands, search, setSearch, searchedBands, searchedDesigners}) {
+function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigners, allBands, setAllBands, search, setSearch, searchedBands, searchedDesigners, setDifferentUser}) {
 
   // const { id } = useParams()
   // console.log(band)
@@ -24,6 +24,17 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
       navigate("/")
     }})
   }  
+
+  // const handleDesignerClick = (e, result) => {
+  //   navigate(`/designers/${result.id}`)
+  //   // console.log(result)
+  //   // setDifferentUser(result)
+  // }
+  // const handleBandClick = (e, result) => {
+  //   navigate(`/bands/${result.id}`)
+  //   // console.log(result)
+  //   // setDifferentUser(result)
+  // }
 
   if (band) {
     return (
@@ -46,7 +57,10 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
           />
             <div style={{ position: "absolute"}}>
               {searchedDesigners.map(result => (
-                <Card as={Link} to={`/designers/${result.id}`} style={{border: "1px solid black", margin: "0px", borderRadius: "2px", padding: "5px", backgroundColor:"white", width: "300px"}} key={result.id}>
+                <Card 
+                // onClick={handleDesignerClick}
+                as={Link} to={`/designers/${result.id}`} 
+                style={{border: "1px solid black", margin: "0px", borderRadius: "2px", padding: "5px", backgroundColor:"white", width: "300px"}} key={result.id}>
                   {result.name}
                 </Card>
               ))}
@@ -87,7 +101,10 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
           />
             <div style={{ position: "absolute"}}>
               {searchedBands.map(result => (
-                <Card as={Link} to={`/bands/${result.id}`} style={{width: "300px", margin: "0px", padding:"5px", border: "1px solid black", borderRadius: "2px", backgroundColor:"white"}} key={result.id}>
+                <Card 
+                // onClick={handleBandClick}
+                as={Link} to={`/bands/${result.id}`} 
+                style={{width: "300px", margin: "0px", padding:"5px", border: "1px solid black", borderRadius: "2px", backgroundColor:"white"}} key={result.id}>
                   {result.name}
                 </Card>
               ))}

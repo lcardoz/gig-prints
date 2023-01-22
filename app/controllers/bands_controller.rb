@@ -1,6 +1,6 @@
 class BandsController < ApplicationController
 
-  skip_before_action :authorize, only: [:index, :create]
+  skip_before_action :authorize, only: [:index, :create, :show_different_band]
 
   def index
     render json: Band.all.order(:name), status: :ok
@@ -22,9 +22,9 @@ class BandsController < ApplicationController
     render json: band, status: :accepted
   end
 
-  # def show_self
-  #   render json: Band.find(params[:id]), status: :ok
-  # end
+  def show_different_band
+    render json: Band.find(params[:id]), status: :ok
+  end
 
   private
 

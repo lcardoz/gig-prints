@@ -1,6 +1,6 @@
 class DesignersController < ApplicationController
 
-  skip_before_action :authorize, only: [:index, :create]
+  skip_before_action :authorize, only: [:index, :create, :show_different_designer]
 
   def index
     render json: Designer.all.order(:name), status: :ok
@@ -22,9 +22,9 @@ class DesignersController < ApplicationController
     render json: designer, status: :accepted
   end
 
-  # def show_self
-  #   render json: Designer.find(params[:id]), status: :ok
-  # end
+  def show_different_designer
+    render json: Designer.find(params[:id]), status: :ok
+  end
 
   private
 

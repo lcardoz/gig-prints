@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 import { Card, Reveal, Grid, Header, Image } from 'semantic-ui-react';
 
 const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBands}) => {
@@ -30,7 +31,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
         <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
           {allDesigners.map((designer) => (
             <Grid.Column key={designer.id} >
-              <Card raised centered>
+              <Card raised centered as={Link} to={`/designers/${designer.id}`} >
                 <Reveal animated='move'>
                   <Reveal.Content visible>
                     <Image className="poster-fixed-size" src={designer.posters.length > 0 ? designer.posters[0].image : "https://imgprd19.hobbylobby.com/a/eb/1a/aeb1a55bc888acb98a75c4cafedb06839eb32fac/1400Wx1400H-752907-1219-px.jpg"} alt={designer.name} />
@@ -82,7 +83,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
         <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
           {allBands.map((band) => (
             <Grid.Column key={band.id} >
-              <Card raised centered style={{width:"91%"}}>
+              <Card raised centered style={{width:"91%"}} as={Link} to={`/bands/${band.id}`} >
               <Card.Content className='image' >
                 <Image className="band-fixed-size" src={band.image ? band.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} alt={band.name} />
               </Card.Content> 

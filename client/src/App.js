@@ -14,6 +14,8 @@ import BandProjects from './BandProjects';
 import DesignerProjects from './DesignerProjects';
 import EditBandProfile from './EditBandProfile';
 import EditDesignerProfile from './EditDesignerProfile';
+import DifferentBandProfile from './DifferentBandProfile';
+import DifferentDesignerProfile from './DifferentDesignerProfile';
 
 function App() {
 
@@ -23,6 +25,7 @@ function App() {
   const [errors, setErrors] = useState(false)
   const [allDesigners, setAllDesigners] = useState([]);
   const [allBands, setAllBands] = useState([]);
+
 
   const [search, setSearch] = useState("")
 
@@ -93,8 +96,8 @@ function App() {
         <Route path="/signup/band" element={<SignupBand />} />
         <Route path="/signup/designer" element={<SignupDesigner />} />
         <Route path="/signup" element={<Signup />} />
-        {band || designer ? <Route path="/bands/:id" element={<BandProfile band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} />} /> : null}
-        {designer || band ? <Route path="/designers/:id" element={<DesignerProfile designer={designer} posters={posters} />} /> : null}
+        {band ? <Route path="/bands/:id" element={<BandProfile band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} />} /> : <Route path="/bands/:id" element={<DifferentBandProfile searchedBands={searchedBands} posters={posters} setSearch={setSearch}/>} /> }
+        {designer ? <Route path="/designers/:id" element={<DesignerProfile designer={designer} posters={posters} />} /> :  <Route path="/designers/:id" element={<DifferentDesignerProfile searchedBands={searchedBands} posters={posters} />} />}
         {band ? <Route path="/bands/:id/projects" element={<BandProjects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
         {designer ? <Route path="/designers/:id/projects" element={<DesignerProjects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
         {band ? <Route path="/bands/:id/edit-profile" element={<EditBandProfile band={band} setBand={setBand} />} /> : null}
