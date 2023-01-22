@@ -3,7 +3,7 @@ class BandsController < ApplicationController
   skip_before_action :authorize, only: [:index, :create]
 
   def index
-    render json: Band.all, status: :ok
+    render json: Band.all.order(:name), status: :ok
   end
 
   def show

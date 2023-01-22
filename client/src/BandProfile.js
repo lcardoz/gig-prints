@@ -19,6 +19,7 @@ const BandProfile = ({band, posters}) => {
     <>
         <br />
         <Header style={{fontSize: 30, textAlign: "center"}}>{band.name.toUpperCase()}</Header> 
+        {/* <br /> */}
         <Grid columns={2} relaxed='very' style={{margin:"2%", fontSize: 20, textAlign: "center"}}>
           <Grid.Column>
             <Image src={band.image ? band.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} size='large' centered rounded alt={band.name}/>

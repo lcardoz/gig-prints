@@ -12,10 +12,40 @@ code {
     monospace;
 }
 
+.photo-fixed-size {
+  justify-self: center;
+  object-fit: cover;
+  height: 20rem;
+  width: 25rem;
+}
+/* 
+.ui.image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 
 
-/* .card-image{
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
 } */
+
+.band-fixed-size {
+  /* justify-self: center;
+  object-fit: cover;
+  height: 20rem;
+  width: 25rem; */
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  
+  /* style={{width:"91%", height: "100%"}} */
+
+}
+
+.poster-fixed-size {
+  justify-self: center;
+  object-fit: cover;
+  height: 28rem;
+  width: 21rem;
+}
+
+

@@ -3,7 +3,7 @@ class DesignersController < ApplicationController
   skip_before_action :authorize, only: [:index, :create]
 
   def index
-    render json: Designer.all, status: :ok
+    render json: Designer.all.order(:name), status: :ok
   end
 
   def show

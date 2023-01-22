@@ -18,13 +18,13 @@ const BandPosterCard = ({band, posters}) => {
       <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
         {completedBandPosters.map((completedPoster) => (
           <Grid.Column key={completedPoster.id} >
-            <Card centered>
-              <Image src={completedPoster.image} />
+            <Card raised centered>
+              <Image className="poster-fixed-size" src={completedPoster.image} />
               <Card.Content>
-                <Card.Header>
+                <Card.Header style={{fontSize: 20}}>
                   {completedPoster.designer.name}
                 </Card.Header>
-                <Card.Description style={{ fontSize: 20}}>
+                <Card.Description style={{fontSize: 16}}>
                   {completedPoster.date}
                   <br />
                   <br />
@@ -34,7 +34,7 @@ const BandPosterCard = ({band, posters}) => {
                   {completedPoster.location}
                 </Card.Description>
               </Card.Content>
-              <Card.Content extra style={{ fontSize: 20}}>
+              <Card.Content style={{fontSize: 16}}>
                 {completedPoster.dimensions}
                 <br />
                 <br />

@@ -1,6 +1,6 @@
 class DesignerSerializer < ActiveModel::Serializer
   attributes :id, :name, :username, :instagram, :website, :location, :image, :bio, :open_to_work
-  # has_many :posters
+  has_many :posters
 
   # def completed_posters
   #   self.object.posters.where("status = ?", 'complete').map{|poster| {
