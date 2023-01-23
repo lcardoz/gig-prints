@@ -4,6 +4,7 @@ import { Card, Divider, Icon, Reveal, Grid, Image } from 'semantic-ui-react';
 import designer_screenshot from "./designer-screenshot.png";
 import band_screenshot from "./band-screenshot.png";
 import projects_screenshot from "./projects-screenshot.png";
+import Slideshow from './Slideshow';
 
 const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBands}) => {
 
@@ -103,7 +104,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
         })
       }})
     return (
-      <div >
+      <div style={{backgroundColor:"#6834CC"}}>
         <br />
         <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{designer.name}</i></Divider>
           <h3 style={{textAlign: "center"}}>Discover bands currently on tour:</h3>
@@ -138,52 +139,42 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
   } else {
     return (
       <>
-      <div>
-        <br />
-        <Divider horizontal style={{fontSize: 24}}>Welcome to Gig Prints</Divider>
-        {/* <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>please login or signup to begin!</i></Header> */}
-        <br />
-        <div id="slideshow-container" style={{backgroundColor:"#6834CC"}}>
-        <br/>
-        <br/>
-          <div id="slideshow-image" style={{fontSize: 20, textAlign: "center"}}>
-            <img  src={slideImages[nextIndex]} alt="img" ></img>
-            <br />
-            <br />
-            <label style={{color: "white"}}>{slideCaptions[nextIndex]}</label>
+        <div>
+          <br />
+          <Divider horizontal style={{fontSize: 24}}>Welcome to Gig Prints</Divider>
+          <br />
+          <div style={{backgroundColor:"#6834CC"}}>
+            <Slideshow />
           </div>
-          <div id="arrows"> 
-            <Icon size="large" className="angle left" onClick={handleBackClick} alt="back arrow" style={{width: 50}}/>
-            <Icon size="large" className="angle right" onClick={handleForwardClick} alt="forward arrow" style={{width: 50}}/>
+          {/* <div id="slideshow-container" style={{backgroundColor:"#6834CC"}}>
+            <br/>
+            <br/>
+              <div id="slideshow-image" style={{fontSize: 20, textAlign: "center"}}>
+                <img  src={slideImages[nextIndex]} alt="img" ></img>
+                <br />
+                <br />
+                <label style={{color: "white"}}>{slideCaptions[nextIndex]}</label>
+              </div>
+              <div id="arrows"> 
+                <Icon size="large" className="chevron left" onClick={handleBackClick} alt="back arrow"/>
+                <Icon size="large" className="chevron right" onClick={handleForwardClick} alt="forward arrow"/>
+              </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
           </div>
-           
-        {/* <br/> */}
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        
+          <br/> */}
+          <Divider horizontal style={{fontSize: 20}}>Login or Signup to begin</Divider>
+          <br/>
         </div>
-      
-        <br/>
-        {/* <Divider horizontal style={{fontSize: 20}}>Discover - Connect - Create</Divider> */}
-        <Divider horizontal style={{fontSize: 20}}>Login or Signup to begin</Divider>
-        <br/>
-      </div>
-      
       </>
     )
   }
-
-  // return (
-  //   <div>
-  //   { band ? <><h2>Welcome, band!</h2></> : null }
-  //   { designer ? <><h2>Welcome, designer!</h2></> : null }
-  //   { !band && !designer ? <><h2>Welcome, to the homepage!</h2></> : null }
-  //   </div>
-  // )
 }
 
 export default Home;

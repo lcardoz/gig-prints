@@ -92,19 +92,17 @@ code {
 #slideshow-image img {
   position: cover;
   height: 290px;
+  margin-top: -0.5em;
 }
 
 #arrows {
   display: flex;
   justify-content: space-between;
   width: 900px;
-  margin-top: -10em;
+  margin-top: -14em;
+  margin-bottom: 4em;
   z-index: 1;
 }
-
-/* #arrows img:hover {
-  background-color: rgb(153, 233, 233);
-} */
 
 .regular-button {
   float: right;
@@ -120,4 +118,57 @@ code {
 
 .regular-button:hover {
   background-color: #5829bb;
+}
+
+/* SLIDESHOW */
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 900px;
+  
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+  
+}
+/* 
+#slide-container-colors {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  border-radius: 40px;
+} */
+
+.slide {
+  background-color: #6834CC;
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  border-radius: 40px;
+  margin-top: 30px;
+  /* margin-bottom: 30px; */
+}
+
+/* Buttons */
+
+.slideshowDots {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #c4c4c4;
+}
+
+.slideshowDot.active {
+  background-color: #23a6d5;
 }

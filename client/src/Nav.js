@@ -19,6 +19,7 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
     .then(r=>{if (r.ok) {
       setBand(null)
       setDesigner(null)
+      setActiveItem('home')
       setSearch("")
       navigate("/")
     }})
