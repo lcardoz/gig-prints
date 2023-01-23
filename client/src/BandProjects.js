@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Table, Select, Form, Input, Header, Button } from 'semantic-ui-react';
+import { Table, Select, Form, Input, Divider, Button } from 'semantic-ui-react';
 
 const statusOptions = [
   { key: 'unassigned', text: 'unassigned', value: 'unassigned' },
@@ -178,8 +178,9 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
 
   return (
     <>
-      <Header style={{fontSize: 24, textAlign: "center"}}>MY PROJECTS</Header>
-      <Table celled>
+    <br />
+    <Divider horizontal style={{fontSize: 20}}>My Projects</Divider>
+      <Table celled style={{marginTop: "35px"}}>
       <Table.Header style={{textAlign: "center"}}>
         <Table.Row>
           <Table.HeaderCell singleLine>Concert Date</Table.HeaderCell>
@@ -303,13 +304,14 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
           ))}
       </Table.Body>
     </Table>
-    <button onClick={toggleForm} style={{float: "right"}}>{showAddProjectForm ? '- Hide Form' : '+ New Project'}</button>
+    <button className="regular-button" onClick={toggleForm} >{showAddProjectForm ? '- Hide Form' : '+ New Project'}</button>
+    <br />
     <br />
     <br />
     {showAddProjectForm ?
       <>
-        <Form onSubmit={createProject}>
-          <Form.Group widths='equal'>
+        <Form onSubmit={createProject} >
+          <Form.Group widths='equal' style={{marginRight: "5px", marginLeft: "5px"}}>
             <Form.Field>
               <label>Concert Date</label>
               <Input fluid 
@@ -394,8 +396,11 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
               />
             </Form.Field>
           </Form.Group>
-          <input type="submit" value="Submit" style={{float: "right"}} />
+          <input type="submit" value="Submit" className="regular-button" />
         </Form>
+        <br />
+        <br />
+        <br />
       </>
       : <></>}
     </>

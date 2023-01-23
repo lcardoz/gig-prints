@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import { Table, Header, Grid, Divider, Card, Image, Dropdown, Button, Segment } from 'semantic-ui-react';
+import { Table, Grid, Divider, Card, Image, Button, Icon } from 'semantic-ui-react';
 import { useParams } from 'react-router-dom';
 
 const DifferentBandProfile = ({posters, setSearch}) => {
   const {id} = useParams()
   const [differentBand, setDifferentBand] = useState({});
-
+  const [showContactInfo, setShowContactInfo] = useState(false);
   
   useEffect(() => {
     fetch(`/bands/${id}`)
@@ -32,27 +32,43 @@ const DifferentBandProfile = ({posters, setSearch}) => {
     )
   })
 
+  const handleToggle = () => {
+    setShowContactInfo(!showContactInfo)
+  }
+
+  const handleClick = async () => {
+    try {
+      await navigator.clipboard.writeText(differentBand.name);
+      alert('E-mail address copied!');
+    } catch (err) {
+      console.error('Failed to copy e-mail address: ', err);
+    }
+  }
+
 
   return (
     <>
       <br />
-        <Header style={{fontSize: 26, textAlign: "center"}}>{differentBand.name}</Header> 
-        <br />
-        <Grid columns={2} relaxed='very' style={{margin:"0% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
-          <Grid.Column>
+      <Divider horizontal style={{fontSize: 26, textAlign: "center"}}>{differentBand.name}</Divider> 
+        <Grid columns={2} relaxed='very' style={{margin:"2% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
+          <Grid.Column centered>
             <Image src={differentBand.image ? differentBand.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={differentBand.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
           <Grid.Column>
-            {differentBand.on_tour ? <p>✅ on tour! </p> : null}
-            {differentBand.instagram ? <p>IG: {differentBand.instagram}</p> : null}
-            {differentBand.website ? <a href={differentBand.website} alt="website">{differentBand.name}'s Website</a> : null} 
-            <br />
-            <br />
-            {differentBand.location ? <p>📍 {differentBand.location}</p> : null}
+            {differentBand.on_tour ? <p><Icon className="check square" color="violet"></Icon>On Tour!</p> : null}
+            {differentBand.instagram ? <><p><Icon className="instagram"></Icon>{differentBand.instagram}</p></> : null}
+            {differentBand.location ? <p><Icon className="location arrow" color="violet"></Icon> {differentBand.location}</p> : null}
+            {differentBand.website ? <><p>Get the latest on {differentBand.name}<a href={differentBand.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 
             <p style={{fontSize: 16}}>{differentBand.bio}</p>
+            <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button>
+            {showContactInfo ? 
+            <>
+              <p style={{marginTop: "10px"}}>{differentBand.name}<Button icon="clone outline" onClick={handleClick} style={{marginLeft: "5px"}}></Button></p>
+            </> 
+            : <><br /><br /><br /></>
+            }
           </Grid.Column>
         </Grid>
-        <br />
         <Divider horizontal style={{fontSize: 20}}>Open Poster Commissions</Divider>  
         <br />
         {unassignedBandPosters.length > 0 ? 

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import { Card, Divider, Icon, Reveal, Grid, Header, Image } from 'semantic-ui-react';
+import { Card, Divider, Icon, Reveal, Grid, Image } from 'semantic-ui-react';
 import designer_screenshot from "./designer-screenshot.png";
 import band_screenshot from "./band-screenshot.png";
 import projects_screenshot from "./projects-screenshot.png";
@@ -14,6 +14,11 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
     designer_screenshot,
     band_screenshot,
     projects_screenshot
+  ]
+  const slideCaptions = [
+    "Facilitating Touring Bands in Discovering Talented Poster Designers",
+    "Empowering Poster Designers to Connect with Touring Bands",
+    "Simplifying and Centralizing the Process of Creating Concert Posters"
   ]
   const [nextIndex, setNextIndex] = useState (0);
   const arrayLength = slideImages.length;
@@ -70,14 +75,14 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
                   <Card.Header style={{fontSize: 20}}>
                     {designer.name}
                   </Card.Header>
-                  <Card.Description style={{fontSize: 16}}>
-                    {designer.instagram}
+                  <Card.Description style={{fontSize: 16, color: "black"}}>
+                    <Icon className="instagram"></Icon>{designer.instagram}
                     <br />
                     {designer.location ? designer.location : <br /> }                    
                   </Card.Description>
                 </Card.Content>
                 <Card.Content className="content-fixed-size" style={{fontSize: 16}}>
-                  {designer.open_to_work ? <p>✅ open to work! </p> : <br /> }
+                  {designer.open_to_work ? <p style={{color: "black"}}><Icon className="check square" color="violet"></Icon>Open To Work!</p> : <br /> }
                 </Card.Content>
               </Card>
               <br />
@@ -114,14 +119,14 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
                   <Card.Header style={{fontSize: 20}}>
                     {band.name}
                   </Card.Header>
-                  <Card.Description style={{fontSize: 16}}>
-                    {band.instagram}
+                  <Card.Description style={{fontSize: 16, color: "black"}}>
+                    <Icon className="instagram"></Icon>{band.instagram}
                     <br />
                     {band.location ? band.location : <br /> }                    
                   </Card.Description>
                 </Card.Content>
                 <Card.Content className="content-fixed-size" style={{fontSize: 16}}>
-                  {band.on_tour ? <p>✅ on tour! </p> : <br /> }
+                  {band.on_tour ? <p style={{color: "black"}}><Icon className="check square" color="violet"></Icon>On Tour!</p> : <br /> }
                 </Card.Content>
               </Card>
               <br />
@@ -135,26 +140,37 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
       <>
       <div>
         <br />
-        <Divider horizontal style={{fontSize: 20}}>Welcome to Gig Prints</Divider>
+        <Divider horizontal style={{fontSize: 24}}>Welcome to Gig Prints</Divider>
         {/* <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>please login or signup to begin!</i></Header> */}
-        <div id="slideshow-container">
-          <div id="slideshow-image">
+        <br />
+        <div id="slideshow-container" style={{backgroundColor:"#6834CC"}}>
+        <br/>
+        <br/>
+          <div id="slideshow-image" style={{fontSize: 20, textAlign: "center"}}>
             <img  src={slideImages[nextIndex]} alt="img" ></img>
+            <br />
+            <br />
+            <label style={{color: "white"}}>{slideCaptions[nextIndex]}</label>
           </div>
           <div id="arrows"> 
             <Icon size="large" className="angle left" onClick={handleBackClick} alt="back arrow" style={{width: 50}}/>
             <Icon size="large" className="angle right" onClick={handleForwardClick} alt="forward arrow" style={{width: 50}}/>
           </div>
+           
+        {/* <br/> */}
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         </div>
+      
         <br/>
+        {/* <Divider horizontal style={{fontSize: 20}}>Discover - Connect - Create</Divider> */}
+        <Divider horizontal style={{fontSize: 20}}>Login or Signup to begin</Divider>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <Divider horizontal style={{fontSize: 20}}>Discover - Connect - Collaborate</Divider>
       </div>
       
       </>

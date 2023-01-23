@@ -64,10 +64,10 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
             <Dropdown.Menu direction="left" style={{ fontSize: 20, color: "black" }}>
               <Dropdown.Item as={Link} to={`/bands/${band.id}`} icon='user' text='My Profile' />
               <Dropdown.Item as={Link} to={`/bands/${band.id}/projects`} icon='tasks' text='My Projects' />
-              <Dropdown.Item icon='inbox' text='My Inbox' />
+              {/* <Dropdown.Item icon='inbox' text='My Inbox' /> */}
               <Dropdown.Item as={Link} to={`/bands/${band.id}/edit-profile`} icon='edit' text='Edit Profile' />
-              <Segment basic textAlign={"center"}>
-                <Button onClick={handleLogout} style={{ fontSize: 20, textAlign: "center"}} >Logout</Button>
+              <Segment basic textAlign={"center"} style={{margin: "0 auto"}}>
+                <Button className="violet ui button" onClick={handleLogout} style={{ fontSize: 18, textAlign: "center"}} >Logout</Button>
               </Segment>
             </Dropdown.Menu>
           </Dropdown>
@@ -114,10 +114,10 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
             <Dropdown.Menu direction="left" style={{ fontSize: 20 }}>
               <Dropdown.Item as={Link} to={`/designers/${designer.id}`}icon='user' text='My Profile' />
               <Dropdown.Item as={Link} to={`/designers/${designer.id}/projects`} icon='tasks' text='My Projects' />
-              <Dropdown.Item icon='inbox' text='My Inbox' />
+              {/* <Dropdown.Item icon='inbox' text='My Inbox' /> */}
               <Dropdown.Item as={Link} to={`/designers/${designer.id}/edit-profile`} icon='edit' text='Edit Profile' />
-              <Segment basic textAlign={"center"}>
-                <Button onClick={handleLogout} style={{ fontSize: 20, textAlign: "center"}} >Logout</Button>
+              <Segment basic textAlign={"center"} style={{margin: "0 auto"}}>
+                <Button className="violet ui button" onClick={handleLogout} style={{ fontSize: 18, textAlign: "center"}} >Logout</Button>
               </Segment>
             </Dropdown.Menu>
           </Dropdown>

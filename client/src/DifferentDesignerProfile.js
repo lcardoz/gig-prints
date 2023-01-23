@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import { Header, Grid, Divider, Card, Image, Dropdown, Button, Segment } from 'semantic-ui-react';
+import { Grid, Divider, Card, Image, Icon, Button } from 'semantic-ui-react';
 import { useParams } from 'react-router-dom';
 
 const DifferentDesignerProfile = ({posters}) => {
   const {id} = useParams()
   const [differentDesigner, setDifferentDesigner] = useState({});
+  const [showContactInfo, setShowContactInfo] = useState(false);
   
   useEffect(() => {
     fetch(`/designers/${id}`)
@@ -25,26 +26,42 @@ const DifferentDesignerProfile = ({posters}) => {
     )
   })
 
+  const handleToggle = () => {
+    setShowContactInfo(!showContactInfo)
+  }
+
+  const handleClick = async () => {
+    try {
+      await navigator.clipboard.writeText(differentDesigner.name);
+      alert('E-mail address copied!');
+    } catch (err) {
+      console.error('Failed to copy e-mail address: ', err);
+    }
+  }
+
   return (
     <>
-        <br />
-        <Header style={{fontSize: 26, textAlign: "center"}}>{differentDesigner.name}</Header>
-        <br />
-        <Grid columns={2} relaxed='very' style={{margin:"0% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
+      <br />
+      <Divider horizontal style={{fontSize: 26, textAlign: "center"}}>{differentDesigner.name}</Divider>
+        <Grid columns={2} relaxed='very' style={{margin:"2% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
           <Grid.Column>
-            <Image src={differentDesigner.image ? differentDesigner.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={differentDesigner.name} style={{maxHeight: "600px"}}/>
+            <Image src={differentDesigner.image ? differentDesigner.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={differentDesigner.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
           <Grid.Column>
-            {differentDesigner.open_to_work ? <p>✅ open to work! </p> : null}
-            {differentDesigner.instagram ? <p>IG: {differentDesigner.instagram}</p> : null}
-            {differentDesigner.website ? <a href={differentDesigner.website} alt="website">{differentDesigner.name}'s Website</a> : null}
-            <br />
-            <br />
-            {differentDesigner.location ? <p>📍 {differentDesigner.location}</p> : null}
+            {differentDesigner.open_to_work ? <p><Icon className="check square" color="violet"></Icon>Open To Work!</p> : null}
+            {differentDesigner.instagram ? <><p><Icon className="instagram"></Icon>{differentDesigner.instagram}</p></> : null}
+            {differentDesigner.location ? <p><Icon className="location arrow" color="violet"></Icon> {differentDesigner.location}</p> : null}
+            {differentDesigner.website ? <><p>Get the latest on {differentDesigner.name}<a href={differentDesigner.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 
             <p style={{fontSize: 16}}>{differentDesigner.bio}</p>
+            <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button>
+            {showContactInfo ? 
+            <>
+              <p style={{marginTop: "10px"}}>{differentDesigner.name}<Button icon="clone outline" onClick={handleClick} style={{marginLeft: "5px"}}></Button></p>
+            </> 
+            : <><br /><br /><br /></>
+            }
           </Grid.Column>
         </Grid>
-        <br />
         <Divider horizontal style={{fontSize: 20}}>Recent Concert Posters</Divider>  
         <br />
         <br />

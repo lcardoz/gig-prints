@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import { useParams } from 'react-router-dom'
-import { Divider, Table, Grid, Header, Image } from 'semantic-ui-react';
+import { Divider, Table, Grid, Image, Icon, Button } from 'semantic-ui-react';
 import BandPosterCard from './BandPosterCard';
 
 const BandProfile = ({band, posters}) => {
+
+  const [showContactInfo, setShowContactInfo] = useState(false);
 
   const unassignedBandPosters = posters.filter((poster) => {
     return (
@@ -11,30 +13,46 @@ const BandProfile = ({band, posters}) => {
     )
   })
 
+  const handleToggle = () => {
+    setShowContactInfo(!showContactInfo)
+  }
+
+  const handleClick = async () => {
+    try {
+      await navigator.clipboard.writeText(band.name);
+      alert('E-mail address copied!');
+    } catch (err) {
+      console.error('Failed to copy e-mail address: ', err);
+    }
+  }
+
   // console.log(band)
   // const { id } = useParams()
   // console.log(unassignedBandPosters)
 
   return (
     <>
-        <br />
-        <Header style={{fontSize: 26, textAlign: "center"}}>{band.name.toUpperCase()}</Header> 
-        <br />
-        <Grid columns={2} relaxed='very' style={{margin:"0% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
+      <br />
+      <Divider horizontal style={{fontSize: 26}}>{band.name}</Divider>
+        <Grid columns={2} relaxed='very' style={{margin:"2% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
           <Grid.Column>
             <Image src={band.image ? band.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={band.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
           <Grid.Column>
-            {band.on_tour ? <p>✅ on tour! </p> : null}
-            {band.instagram ? <p>IG: {band.instagram}</p> : null}
-            {band.website ? <a href={band.website} alt="website">{band.name}'s Website</a> : null} 
-            <br />
-            <br />
-            {band.location ? <p>📍 {band.location}</p> : null}
+            {band.on_tour ? <p><Icon className="check square" color="violet"></Icon>On Tour!</p> : null}
+            {band.instagram ? <><p><Icon className="instagram"></Icon>{band.instagram}</p></> : null}
+            {band.location ? <p><Icon className="location arrow" color="violet"></Icon> {band.location}</p> : null}
+            {band.website ? <><p>Get the latest on {band.name}<a href={band.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 
             <p style={{fontSize: 16}}>{band.bio}</p>
+            <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button>
+            {showContactInfo ? 
+            <>
+              <p style={{marginTop: "10px"}}>{band.name}<Button icon="clone outline" onClick={handleClick} style={{marginLeft: "5px"}}></Button></p>
+            </> 
+            : <><br /><br /><br /></>
+            }
           </Grid.Column>
         </Grid>
-        <br />
         <Divider horizontal style={{fontSize: 20}}>Open Poster Commissions</Divider>  
         <br />
         {unassignedBandPosters.length > 0 ? 

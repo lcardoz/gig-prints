@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import { Table, Header, Button, Form } from 'semantic-ui-react';
+import React, {useState} from 'react'
+import { Table, Button, Form, Divider } from 'semantic-ui-react';
 
 const DesignerProjects = ({band, designer, update, posters, setPosters}) => {
   
@@ -56,8 +56,9 @@ const DesignerProjects = ({band, designer, update, posters, setPosters}) => {
   
   return (
     <>
-      <Header style={{ fontSize: 24, textAlign: "center"}}>MY PROJECTS</Header>
-      <Table celled>
+      <br />
+      <Divider horizontal style={{fontSize: 20}}>My Projects</Divider>
+      <Table celled style={{marginTop: "35px"}}>
         <Table.Header style={{textAlign: "center"}}>
           <Table.Row>
             <Table.HeaderCell singleLine>Band</Table.HeaderCell>
