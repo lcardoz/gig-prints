@@ -3,18 +3,17 @@ import designer_screenshot from "./designer-screenshot.png";
 import band_screenshot from "./band-screenshot.png";
 import projects_screenshot from "./projects-screenshot.png";
 
-// const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const slideImages = [
   designer_screenshot,
   band_screenshot,
   projects_screenshot
 ];
 
-  const slideCaptions = [
-    "Facilitating Touring Bands in Discovering Talented Poster Designers",
-    "Empowering Poster Designers to Connect with Touring Bands",
-    "Simplifying and Centralizing the Process of Creating Concert Posters"
-  ]
+// const slideCaptions = [
+//     "Facilitating Touring Bands in Discovering Talented Poster Designers",
+//     "Empowering Poster Designers to Connect with Touring Bands",
+//     "Simplifying and Centralizing the Process of Creating Concert Posters"
+// ]
 const delay = 2500;
 
 const Slideshow = () => {

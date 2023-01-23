@@ -11,37 +11,6 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
   // const [allDesigners, setAllDesigners] = useState([]);
   // const [allBands, setAllBands] = useState([]);
 
-  const slideImages = [
-    designer_screenshot,
-    band_screenshot,
-    projects_screenshot
-  ]
-  const slideCaptions = [
-    "Facilitating Touring Bands in Discovering Talented Poster Designers",
-    "Empowering Poster Designers to Connect with Touring Bands",
-    "Simplifying and Centralizing the Process of Creating Concert Posters"
-  ]
-  const [nextIndex, setNextIndex] = useState (0);
-  const arrayLength = slideImages.length;
-
-  //onClick function to move "forward" one instance in our array
-  function handleForwardClick (){
-    if (nextIndex < arrayLength - 1) {
-        setNextIndex(nextIndex + 1);
-    } else {
-        setNextIndex(0);
-    }
-}
-
-  //onClick function to move "backward" one instance in memory 
-  function handleBackClick (){
-      if (nextIndex > 0 ){
-          setNextIndex(nextIndex - 1);
-      } else {
-          setNextIndex(arrayLength - 1);
-      }
-  };
-
   const cardsPerRow = 3;
 
   if (band) {
@@ -104,7 +73,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
         })
       }})
     return (
-      <div style={{backgroundColor:"#6834CC"}}>
+      <div>
         <br />
         <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{designer.name}</i></Divider>
           <h3 style={{textAlign: "center"}}>Discover bands currently on tour:</h3>
@@ -146,30 +115,8 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
           <div style={{backgroundColor:"#6834CC"}}>
             <Slideshow />
           </div>
-          {/* <div id="slideshow-container" style={{backgroundColor:"#6834CC"}}>
-            <br/>
-            <br/>
-              <div id="slideshow-image" style={{fontSize: 20, textAlign: "center"}}>
-                <img  src={slideImages[nextIndex]} alt="img" ></img>
-                <br />
-                <br />
-                <label style={{color: "white"}}>{slideCaptions[nextIndex]}</label>
-              </div>
-              <div id="arrows"> 
-                <Icon size="large" className="chevron left" onClick={handleBackClick} alt="back arrow"/>
-                <Icon size="large" className="chevron right" onClick={handleForwardClick} alt="forward arrow"/>
-              </div>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-          </div>
-        
-          <br/> */}
-          <Divider horizontal style={{fontSize: 20}}>Login or Signup to begin</Divider>
+          <br/>
+          <Divider horizontal style={{fontSize: 20}}>Discover - Connect - Create</Divider>
           <br/>
         </div>
       </>
