@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink, Link, useNavigate} from "react-router-dom";
-import { Input, Card, Menu, Image, Dropdown, Button, Segment } from 'semantic-ui-react';
-import logo_image from "./logopic.png";
+import { Input, Card, Menu, Dropdown, Button, Segment } from 'semantic-ui-react';
+import gigprintslogo from "./gig-prints.png";
 
 function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigners, allBands, setAllBands, search, setSearch, searchedBands, searchedDesigners, setDifferentUser}) {
 
@@ -10,9 +10,7 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
 
   const [activeItem, setActiveItem] = useState('home');
   
-
   let navigate = useNavigate();
-  
 
   function handleLogout() {
     fetch(`/logout`, {
@@ -21,123 +19,139 @@ function Nav({band, setBand, designer, setDesigner, allDesigners, setAllDesigner
     .then(r=>{if (r.ok) {
       setBand(null)
       setDesigner(null)
+      setSearch("")
       navigate("/")
     }})
   }  
 
   if (band) {
     return (
-      <Menu secondary pointing>
-      <Image as={NavLink} to="/" src={logo_image} width={60} />
-      <Menu.Item as={NavLink} to="/" style={{ fontSize: 24 }}
-        name='home'
-        active={activeItem === 'home'}
-        onClick={() => setActiveItem('home')} 
-      >
-      </Menu.Item>
-      <Menu.Item style={{ fontSize: 18 }} position='right'>
-        <div>
-          <Input style ={{width: "300px"}} 
-            icon='search' 
-            placeholder='Search Designers...' 
-            type="text"
-            value={search}
-            onChange={(e)=>setSearch(e.target.value)}
-          />
-            <div style={{ position: "absolute"}}>
-              {searchedDesigners.map(result => (
-                <Card 
-                as={Link} to={`/designers/${result.id}`} 
-                onClick={() => {
-                  setSearch("")}}
-                style={{border: "1px solid black", margin: "0px", borderRadius: "2px", padding: "5px", backgroundColor:"white", width: "300px"}} key={result.id}>
-                  {result.name}
-                </Card>
-              ))}
+      <div className="test-test">
+        <Menu secondary pointing>
+          <Menu.Item 
+            as={NavLink} to="/" 
+            name='home'
+            active={activeItem === 'home'}
+            onClick={() => setActiveItem('home')} 
+            >
+            <img src={gigprintslogo} alt='Home' 
+              style={{width: "250px", marginLeft:"8px", marginRight:"8px"}}
+            />
+          </Menu.Item>
+          <Menu.Item style={{ fontSize: 18 }} position='right'>
+            <div>
+              <Input style ={{width: "300px", height: "35px"}} 
+                icon='search' 
+                placeholder='Search Designers...' 
+                type="text"
+                value={search}
+                onChange={(e)=>setSearch(e.target.value)}
+              />
+                <div style={{ position: "absolute"}}>
+                  {searchedDesigners.map(result => (
+                    <Card 
+                    as={Link} to={`/designers/${result.id}`} 
+                    onClick={() => {
+                      setSearch("")}}
+                    style={{border: "1px solid black", margin: "0px", borderRadius: "2px", padding: "5px", backgroundColor:"white", width: "300px"}} key={result.id}>
+                      {result.name}
+                    </Card>
+                  ))}
+                </div>
             </div>
-        </div>
-      </Menu.Item>
-      <Dropdown item icon='bars' style={{ fontSize: 26 }} >
-        <Dropdown.Menu direction="left" style={{ fontSize: 20 }}>
-          <Dropdown.Item as={Link} to={`/bands/${band.id}`} icon='user' text='My Profile' />
-          <Dropdown.Item as={Link} to={`/bands/${band.id}/projects`} icon='tasks' text='My Projects' />
-          <Dropdown.Item icon='inbox' text='My Inbox' />
-          <Dropdown.Item as={Link} to={`/bands/${band.id}/edit-profile`} icon='edit' text='Edit Profile' />
-          <Segment basic textAlign={"center"}>
-            <Button onClick={handleLogout} style={{ fontSize: 20, textAlign: "center"}} >Logout</Button>
-          </Segment>
-        </Dropdown.Menu>
-      </Dropdown>
-      </Menu>
+          </Menu.Item>
+          <Dropdown item icon='bars' style={{ fontSize: 24}} >
+            <Dropdown.Menu direction="left" style={{ fontSize: 20, color: "black" }}>
+              <Dropdown.Item as={Link} to={`/bands/${band.id}`} icon='user' text='My Profile' />
+              <Dropdown.Item as={Link} to={`/bands/${band.id}/projects`} icon='tasks' text='My Projects' />
+              <Dropdown.Item icon='inbox' text='My Inbox' />
+              <Dropdown.Item as={Link} to={`/bands/${band.id}/edit-profile`} icon='edit' text='Edit Profile' />
+              <Segment basic textAlign={"center"}>
+                <Button onClick={handleLogout} style={{ fontSize: 20, textAlign: "center"}} >Logout</Button>
+              </Segment>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Menu>
+      </div>
     )
   } else if (designer) {
     return (
-      <Menu secondary pointing>
-      <Image as={NavLink} to="/" src={logo_image} width={60} />
-      <Menu.Item as={NavLink} to="/" style={{ fontSize: 24 }}
-        name='home'
-        active={activeItem === 'home'}
-        onClick={() => setActiveItem('home')} 
-      >
-      </Menu.Item>
-      <Menu.Item style={{ fontSize: 18 }} position='right'>
-        <div>
-          <Input style ={{width: "300px"}} 
-            icon='search' 
-            placeholder='Search Bands...' 
-            type="text"
-            value={search}
-            onChange={(e)=>setSearch(e.target.value)}
-          />
-            <div style={{ position: "absolute"}}>
-              {searchedBands.map(result => (
-                <Card 
-                as={Link} to={`/bands/${result.id}`}
-                onClick={() => {
-                  setSearch("")}} 
-                style={{width: "300px", margin: "0px", padding:"5px", border: "1px solid black", borderRadius: "2px", backgroundColor:"white"}} key={result.id}>
-                  {result.name}
-                </Card>
-              ))}
+      <div className="test-test">
+        <Menu secondary pointing >
+          <Menu.Item 
+            as={NavLink} to="/" 
+            name='home'
+            active={activeItem === 'home'}
+            onClick={() => setActiveItem('home')} 
+            >
+            <img src={gigprintslogo} alt='Home' 
+              style={{width: "250px", marginLeft:"8px", marginRight:"8px"}}
+            />
+          </Menu.Item>
+          <Menu.Item style={{ fontSize: 18 }} position='right'>
+            <div>
+              <Input style ={{width: "300px", height: "35px"}} 
+                icon='search' 
+                placeholder='Search Bands...' 
+                type="text"
+                value={search}
+                onChange={(e)=>setSearch(e.target.value)}
+              />
+                <div style={{ position: "absolute"}}>
+                  {searchedBands.map(result => (
+                    <Card 
+                    as={Link} to={`/bands/${result.id}`}
+                    onClick={() => {
+                      setSearch("")}} 
+                    style={{width: "300px", margin: "0px", padding:"5px", border: "1px solid black", borderRadius: "2px", backgroundColor:"white"}} key={result.id}>
+                      {result.name}
+                    </Card>
+                  ))}
+                </div>
             </div>
-        </div>
-      </Menu.Item>
-      <Dropdown item icon='bars'  style={{ fontSize: 26 }}>
-        <Dropdown.Menu direction="left" style={{ fontSize: 20 }}>
-          <Dropdown.Item as={Link} to={`/designers/${designer.id}`}icon='user' text='My Profile' />
-          <Dropdown.Item as={Link} to={`/designers/${designer.id}/projects`} icon='tasks' text='My Projects' />
-          <Dropdown.Item icon='inbox' text='My Inbox' />
-          <Dropdown.Item as={Link} to={`/designers/${designer.id}/edit-profile`} icon='edit' text='Edit Profile' />
-          <Segment basic textAlign={"center"}>
-            <Button onClick={handleLogout} style={{ fontSize: 20, textAlign: "center"}} >Logout</Button>
-          </Segment>
-        </Dropdown.Menu>
-      </Dropdown>
-      </Menu>
+          </Menu.Item>
+          <Dropdown item icon='bars'  style={{ fontSize: 24 }}>
+            <Dropdown.Menu direction="left" style={{ fontSize: 20 }}>
+              <Dropdown.Item as={Link} to={`/designers/${designer.id}`}icon='user' text='My Profile' />
+              <Dropdown.Item as={Link} to={`/designers/${designer.id}/projects`} icon='tasks' text='My Projects' />
+              <Dropdown.Item icon='inbox' text='My Inbox' />
+              <Dropdown.Item as={Link} to={`/designers/${designer.id}/edit-profile`} icon='edit' text='Edit Profile' />
+              <Segment basic textAlign={"center"}>
+                <Button onClick={handleLogout} style={{ fontSize: 20, textAlign: "center"}} >Logout</Button>
+              </Segment>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Menu>
+      </div>
     )
   } else {
     return (
-      <Menu secondary pointing>
-      <Image as={NavLink} to="/" src={logo_image} width={60} />
-      <Menu.Item as={NavLink} to="/" style={{ fontSize: 24 }}
-        name='home'
-        active={activeItem === 'home'}
-        onClick={() => setActiveItem('home')} 
-      >
-      </Menu.Item>
-      <Menu.Item as={NavLink} to="/login" style={{ fontSize: 24 }} position='right'
-        name='login'
-        active={activeItem === 'login'}
-        onClick={() => setActiveItem('login')} 
-      >
-      </Menu.Item>
-      <Menu.Item as={NavLink} to="/signup" style={{ fontSize: 24 }}
-        name='signup'
-        active={activeItem === 'signup'}
-        onClick={() => setActiveItem('signup')} 
-      >
-      </Menu.Item>
-    </Menu>
+      <div className="test-test">
+        <Menu secondary pointing >
+        <Menu.Item 
+          as={NavLink} to="/" 
+          name='home'
+          active={activeItem === 'home'}
+          onClick={() => setActiveItem('home')} 
+          >
+          <img src={gigprintslogo} alt='Home' 
+            style={{width: "250px", marginLeft:"8px", marginRight:"8px"}}
+          />
+        </Menu.Item>
+        <Menu.Item as={NavLink} to="/login" style={{fontSize: 24}} position='right'
+          name='login'
+          active={activeItem === 'login'}
+          onClick={() => setActiveItem('login')} 
+        >
+        </Menu.Item>
+        <Menu.Item as={NavLink} to="/signup" style={{fontSize: 24}}
+          name='signup'
+          active={activeItem === 'signup'}
+          onClick={() => setActiveItem('signup')} 
+        >
+        </Menu.Item>
+      </Menu>
+    </div>
     )
   }
 

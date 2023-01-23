@@ -1,11 +1,40 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import { Card, Reveal, Grid, Header, Image } from 'semantic-ui-react';
+import { Card, Divider, Icon, Reveal, Grid, Header, Image } from 'semantic-ui-react';
+import designer_screenshot from "./designer-screenshot.png";
+import band_screenshot from "./band-screenshot.png";
+import projects_screenshot from "./projects-screenshot.png";
 
 const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBands}) => {
 
   // const [allDesigners, setAllDesigners] = useState([]);
   // const [allBands, setAllBands] = useState([]);
+
+  const slideImages = [
+    designer_screenshot,
+    band_screenshot,
+    projects_screenshot
+  ]
+  const [nextIndex, setNextIndex] = useState (0);
+  const arrayLength = slideImages.length;
+
+  //onClick function to move "forward" one instance in our array
+  function handleForwardClick (){
+    if (nextIndex < arrayLength - 1) {
+        setNextIndex(nextIndex + 1);
+    } else {
+        setNextIndex(0);
+    }
+}
+
+  //onClick function to move "backward" one instance in memory 
+  function handleBackClick (){
+      if (nextIndex > 0 ){
+          setNextIndex(nextIndex - 1);
+      } else {
+          setNextIndex(arrayLength - 1);
+      }
+  };
 
   const cardsPerRow = 3;
 
@@ -20,14 +49,11 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
         })
       }})
     return (
-      <>
-        <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>{band.name}!</i></Header> 
-        <h3 style={{textAlign: "center"}}>Touring soon? Need some cool posters? 
+      <div>
+      <br />
+        <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{band.name}</i></Divider>
+          <h3 style={{textAlign: "center"}}>Discover the best and brightest poster designers from around the world:</h3>
           <br/>
-          <br/>
-          Discover the best and brightest poster designers from around the world:
-        </h3>
-        <br/>
         <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
           {allDesigners.map((designer) => (
             <Grid.Column key={designer.id} >
@@ -58,7 +84,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
             </Grid.Column>
           ))}
         </Grid>
-      </>
+      </div>
     )
 
   } else if (designer) {
@@ -72,18 +98,15 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
         })
       }})
     return (
-      <div style={{margin: "2%"}}>
-        <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>{designer.name}!</i></Header> 
-        <h3 style={{textAlign: "center"}}>Need a new poster project? 
+      <div >
+        <br />
+        <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{designer.name}</i></Divider>
+          <h3 style={{textAlign: "center"}}>Discover bands currently on tour:</h3>
           <br/>
-          <br/>
-          Discover bands currently on tour:
-        </h3>
-        <br/>
         <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
           {allBands.map((band) => (
             <Grid.Column key={band.id} >
-              <Card raised centered style={{width:"91%"}} as={Link} to={`/bands/${band.id}`} >
+              <Card raised centered style={{width:"80%", height: "90%"}} as={Link} to={`/bands/${band.id}`} >
               <Card.Content className='image' >
                 <Image className="band-fixed-size" src={band.image ? band.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} alt={band.name} />
               </Card.Content> 
@@ -103,14 +126,37 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
               </Card>
               <br />
             </Grid.Column>
-          ))}
+          ))} 
         </Grid>
       </div>
     )
   } else {
     return (
       <>
-        <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>please login or signup to begin!</i></Header>
+      <div>
+        <br />
+        <Divider horizontal style={{fontSize: 20}}>Welcome to Gig Prints</Divider>
+        {/* <Header style={{fontSize: 24, textAlign: "center"}}>Welcome, <i>please login or signup to begin!</i></Header> */}
+        <div id="slideshow-container">
+          <div id="slideshow-image">
+            <img  src={slideImages[nextIndex]} alt="img" ></img>
+          </div>
+          <div id="arrows"> 
+            <Icon size="large" className="angle left" onClick={handleBackClick} alt="back arrow" style={{width: 50}}/>
+            <Icon size="large" className="angle right" onClick={handleForwardClick} alt="forward arrow" style={{width: 50}}/>
+          </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <Divider horizontal style={{fontSize: 20}}>Discover - Connect - Collaborate</Divider>
+      </div>
+      
       </>
     )
   }

@@ -1,16 +1,21 @@
-import React from 'react'
-import { Button, Container } from 'semantic-ui-react';
+import React from 'react';
+import { Button, Divider, Container } from 'semantic-ui-react';
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  return (
-    <Container>
-      <h1>Login!</h1>
-      <h2>I'm a:</h2>
-      <Button as={Link} to="/login/band" >Band/Musician</Button>
-      <Button as={Link} to="/login/designer" >Poster Designer</Button>
-    </Container>
 
+  return (
+    <div>
+      <br />
+      <Divider horizontal style={{fontSize: 20}}>Who Are You?</Divider>  
+      <Container style={{textAlign: "center"}} >
+      <br />
+        <Button as={Link} to="/login/band" className="violet ui button">Band/Musician</Button>
+        <br />
+        <br />
+        <Button as={Link} to="/login/designer" className="violet ui button">Poster Designer</Button>
+      </Container>
+    </div>
   )
 }
 

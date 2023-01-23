@@ -33,9 +33,13 @@ code {
   object-fit: cover;
   height: 20rem;
   width: 25rem; */
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
   width: 100%;
+  max-height: 15rem;
+  max-width: 15rem;
+  padding: 1rem 1rem 0rem 1rem;
+  
   
   /* style={{width:"91%", height: "100%"}} */
 
@@ -48,4 +52,56 @@ code {
   width: 21rem;
 }
 
+.test {
+	background: linear-gradient(-45deg, #6834CC, #e73ce7, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
 
+.test-test {
+	background: linear-gradient(-45deg, #6834CC, #e73ce7, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	/* height: 100vh; */
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+#slideshow-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 0;
+}
+
+#slideshow-image img {
+  position: cover;
+  height: 290px;
+}
+
+#arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  margin-top: -10em;
+  z-index: 1;
+}
+
+#arrows img:hover {
+  background-color: rgb(153, 233, 233);
+}

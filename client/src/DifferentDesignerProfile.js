@@ -28,11 +28,11 @@ const DifferentDesignerProfile = ({posters}) => {
   return (
     <>
         <br />
-        <Header style={{fontSize: 30, textAlign: "center"}}>{differentDesigner.name}</Header>
+        <Header style={{fontSize: 26, textAlign: "center"}}>{differentDesigner.name}</Header>
         <br />
-        <Grid columns={2} relaxed='very' style={{margin:"2%", fontSize: 20, textAlign: "center"}}>
+        <Grid columns={2} relaxed='very' style={{margin:"0% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
           <Grid.Column>
-            <Image src={differentDesigner.image ? differentDesigner.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} size='large' centered rounded alt={differentDesigner.name}/>
+            <Image src={differentDesigner.image ? differentDesigner.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={differentDesigner.name} style={{maxHeight: "600px"}}/>
           </Grid.Column>
           <Grid.Column>
             {differentDesigner.open_to_work ? <p>✅ open to work! </p> : null}
@@ -41,7 +41,7 @@ const DifferentDesignerProfile = ({posters}) => {
             <br />
             <br />
             {differentDesigner.location ? <p>📍 {differentDesigner.location}</p> : null}
-            <p>{differentDesigner.bio}</p>
+            <p style={{fontSize: 16}}>{differentDesigner.bio}</p>
           </Grid.Column>
         </Grid>
         <br />

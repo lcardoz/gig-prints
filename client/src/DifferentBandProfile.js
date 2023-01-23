@@ -36,20 +36,20 @@ const DifferentBandProfile = ({posters, setSearch}) => {
   return (
     <>
       <br />
-        <Header style={{fontSize: 30, textAlign: "center"}}>{differentBand.name}</Header> 
-        {/* <br /> */}
-        <Grid columns={2} relaxed='very' style={{margin:"2%", fontSize: 20, textAlign: "center"}}>
+        <Header style={{fontSize: 26, textAlign: "center"}}>{differentBand.name}</Header> 
+        <br />
+        <Grid columns={2} relaxed='very' style={{margin:"0% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
           <Grid.Column>
-            <Image src={differentBand.image ? differentBand.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} size='large' centered rounded alt={differentBand.name}/>
+            <Image src={differentBand.image ? differentBand.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={differentBand.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
-          <Grid.Column >
+          <Grid.Column>
             {differentBand.on_tour ? <p>✅ on tour! </p> : null}
             {differentBand.instagram ? <p>IG: {differentBand.instagram}</p> : null}
             {differentBand.website ? <a href={differentBand.website} alt="website">{differentBand.name}'s Website</a> : null} 
             <br />
             <br />
             {differentBand.location ? <p>📍 {differentBand.location}</p> : null}
-            <p>{differentBand.bio}</p>
+            <p style={{fontSize: 16}}>{differentBand.bio}</p>
           </Grid.Column>
         </Grid>
         <br />

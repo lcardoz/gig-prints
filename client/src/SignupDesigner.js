@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, Form } from 'semantic-ui-react';
+import { Button, Form, Divider, Container } from 'semantic-ui-react';
 
 const SignupDesigner = () => {
 
@@ -53,23 +53,30 @@ const SignupDesigner = () => {
 	}
 
   return (
-    <Form onSubmit={onSubmit} >
-    <h1>Poster Designer Signup</h1> 
-    <Form.Field width={4}>
-      <label>Name:</label>
-      <input type="text" name="name" value={name} onChange={handleChange} />
-    </Form.Field>
-    <Form.Field width={4}>
-      <label>Username:</label>
-      <input type="text" name="username" value={username} onChange={handleChange} />
-    </Form.Field>
-    <Form.Field width={4}>
-      <label>Password:</label>
-      <input type="password" name="password" value={password} onChange={handleChange} />
-    </Form.Field>
-    {errors ? errors.map((error, i)=><p key={i} >{error}</p>) : null}
-    <Button type='submit'>Signup</Button>
-  </Form>
+    <div>
+      <br />
+      <Divider horizontal style={{fontSize: 20}}>Designer Signup</Divider>
+      <br />
+      <Container style={{ display: "flex", justifyContent: "center", textAlign: "center"}}>
+        <Form onSubmit={onSubmit} >
+          <Form.Field>
+            <label>Name:</label>
+            <input type="text" name="name" value={name} onChange={handleChange} />
+          </Form.Field>
+          <Form.Field>
+            <label>Username:</label>
+            <input type="text" name="username" value={username} onChange={handleChange} />
+          </Form.Field>
+          <Form.Field>
+            <label>Password:</label>
+            <input type="password" name="password" value={password} onChange={handleChange} />
+          </Form.Field>
+          {errors ? errors.map((error, i)=><p key={i} >{error}</p>) : null}
+          <br /> 
+          <Button type='submit' className="violet ui button">Signup</Button>
+        </Form>
+      </Container>
+    </div>
   )
 }
 

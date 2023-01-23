@@ -18,20 +18,20 @@ const BandProfile = ({band, posters}) => {
   return (
     <>
         <br />
-        <Header style={{fontSize: 30, textAlign: "center"}}>{band.name.toUpperCase()}</Header> 
-        {/* <br /> */}
-        <Grid columns={2} relaxed='very' style={{margin:"2%", fontSize: 20, textAlign: "center"}}>
+        <Header style={{fontSize: 26, textAlign: "center"}}>{band.name.toUpperCase()}</Header> 
+        <br />
+        <Grid columns={2} relaxed='very' style={{margin:"0% 2% 2% 2%", fontSize: 20, textAlign: "center"}}>
           <Grid.Column>
-            <Image src={band.image ? band.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} size='large' centered rounded alt={band.name}/>
+            <Image src={band.image ? band.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={band.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
-          <Grid.Column >
+          <Grid.Column>
             {band.on_tour ? <p>✅ on tour! </p> : null}
             {band.instagram ? <p>IG: {band.instagram}</p> : null}
             {band.website ? <a href={band.website} alt="website">{band.name}'s Website</a> : null} 
             <br />
             <br />
             {band.location ? <p>📍 {band.location}</p> : null}
-            <p>{band.bio}</p>
+            <p style={{fontSize: 16}}>{band.bio}</p>
           </Grid.Column>
         </Grid>
         <br />

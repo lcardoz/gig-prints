@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button, Form } from 'semantic-ui-react';
+import { Button, Form, Divider, Container } from 'semantic-ui-react';
 
 const LoginDesigner = ({setDesigner}) => {
 
@@ -54,20 +54,27 @@ const LoginDesigner = ({setDesigner}) => {
 	}
 
   return (
-    <Form onSubmit={onSubmit}>
-    <h1>Poster Designer Login</h1> 
-    <Form.Field width={4}>
-      <label>Username:</label>
-      <input type="text" name="username" value={username} onChange={handleChange} />
-    </Form.Field>
-    <Form.Field width={4}>
-      <label>Password:</label>
-      <input type="password" name="password" value={password} onChange={handleChange} />
-    </Form.Field>
-    {errors ? <div style={{color: "red" }}>{errors}</div> : null}
-    <Button type='submit'>Login</Button>
-  </Form>
+    <div>
+      <br />
+      <Divider horizontal style={{fontSize: 20}}>Designer Login</Divider>  
+      <br />
+      <Container style={{ display: "flex", justifyContent: "center", textAlign: "center"}}>
+        <Form onSubmit={onSubmit}>
+          <Form.Field>
+            <label>Username:</label>
+            <input type="text" name="username" value={username} onChange={handleChange} />
+          </Form.Field>
+          <Form.Field>
+            <label>Password:</label>
+            <input type="password" name="password" value={password} onChange={handleChange} />
+          </Form.Field>
+          {errors ? <div style={{color: "red" }}>{errors}</div> : null}
+          <br />
+          <Button type='submit' className="violet ui button">Login</Button>
+        </Form>
+      </Container>
+    </div>
   )
 }
 
-export default LoginDesigner
+export default LoginDesigner;

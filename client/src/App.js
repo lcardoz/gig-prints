@@ -87,7 +87,8 @@ function App() {
   if (errors) return <h1>{errors}</h1>
 
   return (
-    <div className="App">
+    <>
+
       <Nav band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} allDesigners={allDesigners} setAllDesigners={setAllDesigners} allBands={allBands} setAllBands={setAllBands} search={search} setSearch={setSearch} searchedBands={searchedBands} searchedDesigners={searchedDesigners} />
       <Routes>
         <Route path="/login/band" element={<LoginBand band={band} setBand={setBand} />} />
@@ -104,7 +105,8 @@ function App() {
         {designer ? <Route path="/designers/:id/edit-profile" element={<EditDesignerProfile designer={designer} setDesigner={setDesigner} />} /> : null}
         <Route path= "/" element={<Home band={band} designer={designer} allDesigners={allDesigners} setAllDesigners={setAllDesigners} allBands={allBands} setAllBands={setAllBands} /> } />
       </Routes>
-    </div>
+
+    </>
   );
 }
 
