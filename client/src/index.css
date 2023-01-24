@@ -146,3 +146,16 @@ code {
   border: 3px solid #6834CC;
   border-radius: 7px;
 }
+
+#filter-checkbox {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+  vertical-align: bottom;
+  position: relative;
+  top: -3px;
+  color: white;
+  accent-color: #6834CC;
+}

@@ -1,12 +1,30 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import { Card, Divider, Icon, Reveal, Grid, Image } from 'semantic-ui-react';
+import { Card, Divider, Icon, Reveal, Grid, Image, Checkbox } from 'semantic-ui-react';
 import Slideshow from './Slideshow';
 
 const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBands}) => {
 
   // const [allDesigners, setAllDesigners] = useState([]);
   // const [allBands, setAllBands] = useState([]);
+
+  const [showFiltered, setShowFiltered] = useState(false)
+  const filteredDesigners = allDesigners.filter((designer) => {
+    if (showFiltered) {
+      return designer.open_to_work === true
+    }
+    else {
+      return true
+    }
+  })
+  const filteredBands = allBands.filter((band) => {
+    if (showFiltered) {
+      return band.on_tour === true
+    }
+    else {
+      return true
+    }
+  })
 
   const cardsPerRow = 3;
 
@@ -25,9 +43,15 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
       <br />
         <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{band.name}</i></Divider>
           <h3 style={{textAlign: "center"}}>Explore Poster Designers</h3>
+          <div style={{textAlign: "center"}}>
+            <label>
+              <input id="filter-checkbox" type="checkbox" name="filter" checked={showFiltered} onChange={e=>setShowFiltered(e.target.checked)}/>
+              Only Show Poster Designers Open To Work
+            </label>
+          </div>   
           <br/>
         <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
-          {allDesigners.map((designer) => (
+          {filteredDesigners.map((designer) => (
             <Grid.Column key={designer.id} >
               <Card id="hover-card" raised centered as={Link} to={`/designers/${designer.id}`}  >
                 <Reveal animated='move'>
@@ -74,9 +98,15 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
         <br />
         <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{designer.name}</i></Divider>
           <h3 style={{textAlign: "center"}}>Explore Bands</h3>
+          <div style={{textAlign: "center"}}>
+            <label>
+              <input id="filter-checkbox" type="checkbox" name="filter" checked={showFiltered} onChange={e=>setShowFiltered(e.target.checked)}/>
+              Only Show Bands Currently On Tour
+            </label>
+          </div>   
           <br/>
         <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
-          {allBands.map((band) => (
+          {filteredBands.map((band) => (
             <Grid.Column key={band.id} >
               <Card id="hover-card" raised centered style={{width:"80%", height: "90%"}} as={Link} to={`/bands/${band.id}`} >
               <Card.Content >

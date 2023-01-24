@@ -116,7 +116,7 @@ const EditDesignerProfile = ({designer, setDesigner}) => {
           />        
           <br/>
           <div style={{display: "flex", justifyContent: "center"}}>
-          <Button type='submit'>Update</Button>
+          <Button className="violet ui button" type='submit'>Update</Button>
           </div>
         </Form>
         <br/>

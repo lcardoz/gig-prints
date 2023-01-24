@@ -116,7 +116,7 @@ const EditBandProfile = ({band, setBand}) => {
           />        
           <br/>
           <div style={{display: "flex", justifyContent: "center"}}>
-          <Button type='submit'>Update</Button>
+          <Button type='submit' className="violet ui button">Update</Button>
           </div>
         </Form>
         <br/>
