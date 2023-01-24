@@ -27,7 +27,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
       <div >
       <br />
         <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{band.name}</i></Divider>
-          <h3 style={{textAlign: "center"}}>Discover the best and brightest poster designers from around the world:</h3>
+          <h3 style={{textAlign: "center"}}>Explore Poster Designers:</h3>
           <br/>
         <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
           {allDesigners.map((designer) => (
@@ -46,7 +46,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
                     {designer.name}
                   </Card.Header>
                   <Card.Description style={{fontSize: 16, color: "black"}}>
-                    <Icon className="instagram"></Icon>{designer.instagram}
+                    {designer.instagram ? <><Icon className="instagram"></Icon>{designer.instagram} <br /></> : null}
                     <br />
                     {designer.location ? designer.location : <br /> }                    
                   </Card.Description>
@@ -76,7 +76,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
       <div >
         <br />
         <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{designer.name}</i></Divider>
-          <h3 style={{textAlign: "center"}}>Discover bands currently on tour:</h3>
+          <h3 style={{textAlign: "center"}}>Explore Bands</h3>
           <br/>
         <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
           {allBands.map((band) => (
@@ -90,8 +90,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
                     {band.name}
                   </Card.Header>
                   <Card.Description style={{fontSize: 16, color: "black"}}>
-                    <Icon className="instagram"></Icon>{band.instagram}
-                    <br />
+                    {band.instagram ? <><Icon className="instagram"></Icon>{band.instagram} <br /></> : null}
                     {band.location ? band.location : <br /> }                    
                   </Card.Description>
                 </Card.Content>

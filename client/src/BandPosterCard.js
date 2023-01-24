@@ -15,7 +15,7 @@ const BandPosterCard = ({band, posters}) => {
 
   return (
     <>
-      <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
+      <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
         {completedBandPosters.map((completedPoster) => (
           <Grid.Column key={completedPoster.id} >
             <Card raised centered>

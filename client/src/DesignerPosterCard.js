@@ -15,7 +15,7 @@ const DesignerPosterCard = ({designer, posters}) => {
 
   return (
     <>
-    <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
+    <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
       {completedDesignerPosters.map((completedPoster) => (
         <Grid.Column key={completedPoster.id} >
           <Card raised centered>

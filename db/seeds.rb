@@ -13,7 +13,7 @@ phish = Band.create(
   instagram: "phish",
   website: "https://phish.com/",
   location: "Burlington, VT",
-  image: "https://pbs.twimg.com/profile_images/1220462088411406339/MOuBHWFR_400x400.jpg",
+  image: "https://consequence.net/wp-content/uploads/2023/01/phish-2023-west-coast-tours.jpg?quality=80&w=1031&h=580&crop=1&resize=1031%2C580&strip",
   bio: "Phish is an American rock band formed in Burlington, Vermont, in 1983. The band is known for musical improvisation, extended jams, blending of genres, and a dedicated fan base.",
   on_tour: true,
   email: "phish@phish.com"
@@ -97,18 +97,70 @@ pixies = Band.create(
   email: "pixies@pixies.com"
 )
 
-# Band.create(
-#   name: "",
-#   username: "",
-#   password: "",
-#   instagram: "",
-#   website: "",
-#   location: "",
-#   image: "",
-#   bio: "",
-#   on_tour: true,
-#   email: ""
-# )
+erykah_badu = Band.create(
+  name: "Erykah Badu",
+  username: "erykahbadu",
+  password: "Erykah123!",
+  instagram: "erykahbadu",
+  website: "https://baduworldmarket.com/",
+  location: "Dallas, TX",
+  image: "https://media.newyorker.com/photos/590975ff1c7a8e33fb38f63a/16:9/w_1280,c_limit/160425_r28041.jpg",
+  bio: "",
+  on_tour: true,
+  email: "merch@erykahbadu.com"
+)
+
+patti_smith = Band.create(
+  name: "Patti Smith",
+  username: "pattismith",
+  password: "Patti123!",
+  instagram: "thisispattismith",
+  website: "https://www.pattismith.net/intro.html",
+  location: "New York, NY",
+  image: "https://i.scdn.co/image/44012cfc4fedcbe92ac5e14178061fd3a872417f",
+  bio: "Patti Smith is an American singer, songwriter, poet, painter, and author who became an influential component of the New York City punk rock movement with her 1975 debut album Horses. Called the punk poet laureate, Smith fused rock and poetry in her work.",
+  on_tour: true,
+  email: "pattismith@pattismith.com"
+)
+
+the_black_keys = Band.create(
+  name: "The Black Keys",
+  username: "theblackkeys",
+  password: "Theb123!",
+  instagram: "theblackkeys",
+  website: "https://theblackkeys.com/?frontpage=true",
+  location: "Akron, OH",
+  image: "https://media.npr.org/assets/img/2014/05/07/the_black_keys-23224d1c385198efbccf3a1d98028858ca1fc774.jpg",
+  bio: "The Black Keys are an American rock duo formed in Akron, Ohio, in 2001. The group consists of Dan Auerbach and Patrick Carney.",
+  on_tour: true,
+  email: "merch@theblackkeys.com"
+)
+
+childish_gambino = Band.create(
+  name: "Childish Gambino",
+  username: "childishgambino",
+  password: "Childish123!",
+  instagram: "",
+  website: "https://awakenmylove.com/",
+  location: "Los Angeles, CA",
+  image: "https://i.scdn.co/image/ab6761610000e5eb3ef779aa0d271adb2b6a3ded",
+  bio: "Donald McKinley Glover Jr., also known by his stage name Childish Gambino, is an American actor, comedian, singer, writer, director, and producer. After working in Derrick Comedy while studying at New York University, Glover was hired at age 23 by Tina Fey as a writer for the NBC sitcom 30 Rock.",
+  on_tour: true,
+  email: "merch@childishgambino.com"
+)
+
+the_flaming_lips = Band.create(
+  name: "The Flaming Lips",
+  username: "theflaminglips",
+  password: "Lips123!",
+  instagram: "waynecoyne5",
+  website: "https://www.flaminglips.com/",
+  location: "Los Angeles, CA",
+  image: "https://i.scdn.co/image/ab6761610000e5ebbaf865cbf7ef15f97d6ef1fe",
+  bio: "The Flaming Lips are an American psychedelic rock band formed in 1983 in Oklahoma City, Oklahoma. The band currently consists of Wayne Coyne, Steven Drozd, Derek Brown, Matt Duckworth Kirksey and Nicholas Ley.",
+  on_tour: true,
+  email: "merch@theflaminglips.com"
+)
 
 
 # DESIGNER SEEDS:
@@ -178,18 +230,57 @@ ken_taylor = Designer.create(
   email: "kentaylor@gmail.com"
 )
 
-# Designer.create(
-#   name: "",
-#   username: "",
-#   password: "",
-#   instagram: "",
-#   website: "",
-#   location: "",
-#   image: "",
-#   bio: "",
-#   open_to_work: true,
-#   email: ""
-# )
+lil_tuffy = Designer.create(
+  name: "Lil Tuffy",
+  username: "liltuffy",
+  password: "Lilt123!",
+  instagram: "lil_tuffy",
+  website: "https://www.lil-tuffy.com/",
+  location: "San Francisco, CA",
+  image: "https://n9i5g5z6.stackpathcdn.com/wp-content/pictsnShit/2020/05/Ausform_Tuffy_simmonstobias-2.jpg",
+  bio: "Lil Tuffy is an American artist and designer in the field of modern rock/pop poster art, also known as 'gigposter' art, as well as serigraph and fine art production. Tuffy began his career in San Francisco at the Firehouse with Chuck Sperry and Ron Donovan. As a member of the 2000s resurgence of the poster-art scene he has designed posters for a wide variety of musical acts, including Devo, Slayer, Pavement, Queens of the Stone Age, Faith No More, The White Stripes, The Black Keys, Morrissey and many others. His work has been exhibited in the USA, Canada, Mexico, Spain, Portugal, Germany, France, Belgium, the Netherlands, Serbia, and the UK and he regularly appears at music festivals including South by Southwest, Bonnaroo Music Festival, Noise Pop, Primavera Sound, Outside Lands Music and Arts Festival, Reeperbahn Festival and more.",
+  open_to_work: true,
+  email: "liltuffy@gmail.com"
+)
+
+emek = Designer.create(
+  name: "Emek",
+  username: "emek",
+  password: "Emek123!",
+  instagram: "emek_studios",
+  website: "https://www.emek.net/",
+  location: "Fairview, OR",
+  image: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Emek_with_his_%22High_On_Fire%22_Gig_Poster_in_2006.jpg",
+  bio: "Emek is a designer, illustrator and fine art painter. He was called -The Thinking Mans Poster Artist- by punk-rock singer Henry Rollins while working on the album cover for A Rollins in the Wry.",
+  open_to_work: true,
+  email: "emekstudios@gmail.com"
+)
+
+helen_kennedy = Designer.create(
+  name: "Helen Kennedy",
+  username: "helenkennedy",
+  password: "Helen123!",
+  instagram: "zazzcorp",
+  website: "https://www.zazzcorp.com/",
+  location: "Newington, CT",
+  image: "https://cdn.shopify.com/s/files/1/0051/4490/3751/files/Screen_Shot_2020-01-11_at_10.52.51_AM_480x480.png?v=1579104253",
+  bio: "Helen Kennedy aka ZazzCorp an artist/illustrator with an obsession for drawing skulls. The Zazz Corp motto -Design for Weirdos- embodies the strange, far out, and weird.",
+  open_to_work: true,
+  email: "zazzcorp@gmail.com"
+)
+
+dave_kloc = Designer.create(
+  name: "Dave Kloc",
+  username: "davekloc",
+  password: "Dave123!",
+  instagram: "davekloc",
+  website: "https://www.davekloc.com/",
+  location: "Los Angeles, CA",
+  image: "https://i.discogs.com/djDkxxwta4YeuBUBDgXqRhewjqpruRz9w9FhhFoQj8M/rs:fit/g:sm/q:90/h:250/w:346/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1NTIw/NDUtMTQyMzIzMjc0/My04NjY4LmpwZWc.jpeg",
+  bio: "Hi - I'm Dave Kloc. I illustrate posters for bands, comedians TV shows and sometimes hockey teams. This is my website for all of my work. I like making it and I hope you enjoy looking at it. Lets keep this ball rollin eh?",
+  open_to_work: true,
+  email: "davekloc@gmail.com"
+)
 
 
 # POSTER SEEDS:
@@ -360,6 +451,101 @@ Poster.create(
   dimensions: "18x24"
 )
 
+Poster.create(
+  band_id: phish.id,
+  date: "April 21-23, 2023",
+  venue: "Hollywood Bowl",
+  location: "Los Angeles, CA",
+  edition: 1200,
+  status: "unassigned",
+  duedate: "03/21/2023",
+  budget: "$30,000",
+  dimensions: "18x24"
+)
+
+Poster.create(
+  band_id: erykah_badu.id,
+  designer_id: emek.id,
+  image: "https://www.emek.net/rock/b/600/emek_badu_australia_2011.jpg",
+  date: "February 08-22, 2011",
+  venue: "Multiple Venues",
+  location: "Australia",
+  edition: 500,
+  status: "complete",
+  duedate: "01/08/2011",
+  budget: "$10,000",
+  dimensions: "18x24"
+)
+
+Poster.create(
+  band_id: patti_smith.id,
+  designer_id: emek.id,
+  image: "https://www.emek.net/rock/s/600/patti_smith_horseBarbWire_emek.jpg",
+  date: "August 6, 2018",
+  venue: "Paradiso",
+  location: "Amsterdam, Netherlands",
+  edition: 150,
+  status: "complete",
+  duedate: "07/06/2018",
+  budget: "$7,000",
+  dimensions: "18x24"
+)
+
+Poster.create(
+  band_id: the_black_keys.id,
+  designer_id: helen_kennedy.id,
+  image: "https://posterdrops-images.s3.amazonaws.com/art_images/298067863_5353491208074859_1763640267784125751_n_1660152896.jpg",
+  date: "July 20, 2022",
+  venue: "Saratoga Performing Arts Center",
+  location: "Saratoga, NY",
+  edition: 50,
+  status: "complete",
+  duedate: "06/20/2022",
+  budget: "$5,000",
+  dimensions: "18x24"
+)
+
+Poster.create(
+  band_id: childish_gambino.id,
+  designer_id: dave_kloc.id,
+  image: "https://images.squarespace-cdn.com/content/v1/5b1dc302e17ba33fa4d22f2c/1545074080778-KW789POAAMPH4PYLQZ7F/FinalJPG.jpg?format=2500w",
+  date: "December 17, 2018",
+  venue: "The Forum",
+  location: "Los Angeles, CA",
+  edition: 500,
+  status: "complete",
+  duedate: "11/17/2018",
+  budget: "$10,000",
+  dimensions: "18x24"
+)
+
+Poster.create(
+  band_id: the_flaming_lips.id,
+  designer_id: lil_tuffy.id,
+  image: "https://assets.bigcartel.com/product_images/348696622/flamingLips.jpg?auto=format&fit=max&h=1000&w=1000",
+  date: "November 18-19, 2022",
+  venue: "The Warfield Theatre",
+  location: "San Francisco, CA",
+  edition: 200,
+  status: "complete",
+  duedate: "10/18/2022",
+  budget: "$10,000",
+  dimensions: "18x24"
+)
+
+# Poster.create(
+#   band_id: ,
+#   designer_id: ,
+#   image: "",
+#   date: "",
+#   venue: "",
+#   location: "",
+#   edition: ,
+#   status: "",
+#   duedate: "",
+#   budget: "",
+#   dimensions: ""
+# )
 
 # Poster.create(
 #   band_id: ,

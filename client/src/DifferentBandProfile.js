@@ -102,7 +102,7 @@ const DifferentBandProfile = ({posters, setSearch}) => {
         <Divider horizontal style={{ fontSize: 20}}>Recent Concert Posters</Divider>  
         <br />
         <br />
-        <Grid columns={cardsPerRow} style={{textAlign: "center"}}>
+        <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
         {completedBandPosters.map((completedPoster) => (
           <Grid.Column key={completedPoster.id} >
             <Card raised centered>
