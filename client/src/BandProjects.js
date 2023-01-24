@@ -151,6 +151,19 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
       })
       setPosters(newPosters)
       setEditingId(null);
+      setNewProjectFormData({
+        band_id: band.id,
+        designer_id: "",
+        // image: "",
+        date: "",
+        venue: "",
+        location: "",
+        edition: "",
+        status: "",
+        duedate: "",
+        budget: "",
+        dimensions: ""
+      })
       // console.log(updatedPoster)
       // console.log(newPosters)
       // console.log("saved!")
@@ -396,7 +409,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
               />
             </Form.Field>
           </Form.Group>
-          <input type="submit" value="Submit" className="regular-button" />
+          <input type="submit" value="Submit"className="regular-button" />
         </Form>
         <br />
         <br />

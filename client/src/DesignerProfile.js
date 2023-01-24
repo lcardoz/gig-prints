@@ -38,7 +38,7 @@ const DesignerProfile = ({designer, posters}) => {
             {designer.location ? <p><Icon className="location arrow" color="violet"></Icon> {designer.location}</p> : null}
             {designer.website ? <><p>Get the latest on {designer.name}<a href={designer.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 
             <p style={{fontSize: 16}}>{designer.bio}</p>
-            <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button>
+            {designer.email ? <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button> : null}
             {showContactInfo ? 
             <>
               <p style={{marginTop: "10px"}}>{designer.email}<Button icon="clone outline" onClick={handleClick} style={{marginLeft: "5px"}}></Button></p>
@@ -48,7 +48,6 @@ const DesignerProfile = ({designer, posters}) => {
           </Grid.Column>
         </Grid>
         <Divider horizontal style={{fontSize: 20}}>Recent Concert Posters</Divider>  
-        <br />
         <br />
         <DesignerPosterCard designer={designer} posters={posters} />
         <br />

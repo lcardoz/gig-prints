@@ -44,7 +44,7 @@ const BandProfile = ({band, posters}) => {
             {band.location ? <p><Icon className="location arrow" color="violet"></Icon> {band.location}</p> : null}
             {band.website ? <><p>Get the latest on {band.name}<a href={band.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 
             <p style={{fontSize: 16}}>{band.bio}</p>
-            <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button>
+            {band.email ? <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button> : null}
             {showContactInfo ? 
             <>
               <p style={{marginTop: "10px"}}>{band.email}<Button icon="clone outline" onClick={handleClick} style={{marginLeft: "5px"}}></Button></p>
@@ -84,7 +84,6 @@ const BandProfile = ({band, posters}) => {
         }
         <br />
         <Divider horizontal style={{ fontSize: 20}}>Recent Concert Posters</Divider>  
-        <br />
         <br />
         <BandPosterCard band={band} posters={posters} />
         <br />

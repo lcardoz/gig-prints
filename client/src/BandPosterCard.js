@@ -15,6 +15,9 @@ const BandPosterCard = ({band, posters}) => {
 
   return (
     <>
+    {completedBandPosters.length > 0 ?
+      <>
+      <br />
       <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
         {completedBandPosters.map((completedPoster) => (
           <Grid.Column key={completedPoster.id} >
@@ -43,6 +46,14 @@ const BandPosterCard = ({band, posters}) => {
           </Grid.Column>
         ))}
       </Grid>
+    </>
+    :
+    <>
+    <p style={{fontSize:"18px", fontStyle:"italic", textAlign: "center"}}>
+      Complete projects to add your latest and greatest posters here!
+    </p>
+    </>
+    }
     </>
   )
 }

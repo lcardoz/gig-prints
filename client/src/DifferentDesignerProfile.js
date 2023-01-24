@@ -53,7 +53,7 @@ const DifferentDesignerProfile = ({posters}) => {
             {differentDesigner.location ? <p><Icon className="location arrow" color="violet"></Icon> {differentDesigner.location}</p> : null}
             {differentDesigner.website ? <><p>Get the latest on {differentDesigner.name}<a href={differentDesigner.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 
             <p style={{fontSize: 16}}>{differentDesigner.bio}</p>
-            <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button>
+            {differentDesigner.email ? <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button> :null}
             {showContactInfo ? 
             <>
               <p style={{marginTop: "10px"}}>{differentDesigner.email}<Button icon="clone outline" onClick={handleClick} style={{marginLeft: "5px"}}></Button></p>
@@ -64,35 +64,45 @@ const DifferentDesignerProfile = ({posters}) => {
         </Grid>
         <Divider horizontal style={{fontSize: 20}}>Recent Concert Posters</Divider>  
         <br />
-        <br />
-        <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
-      {completedDesignerPosters.map((completedPoster) => (
-        <Grid.Column key={completedPoster.id} >
-          <Card raised centered>
-            <Image className="poster-fixed-size" src={completedPoster.image} />
-            <Card.Content style={{textAlign: "center"}}>
-              <Card.Header style={{fontSize: 20}}>
-                {completedPoster.band.name}
-              </Card.Header>
-              <Card.Description style={{ fontSize: 16, textAlign: "center"}}>
-                {completedPoster.date}
-                <br />
-                <br />
-                {completedPoster.venue}
-                <br />
-                <br />
-                {completedPoster.location}
-              </Card.Description>
-            </Card.Content>
-            <Card.Content extra style={{ fontSize: 16, textAlign: "center", color: "black"}}>
-              {completedPoster.dimensions}
-              <br />
-              Edition of {completedPoster.edition}
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-      ))}
-    </Grid>
+        {completedDesignerPosters.length > 0 ?
+          <>
+            <br />
+            <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
+              {completedDesignerPosters.map((completedPoster) => (
+                <Grid.Column key={completedPoster.id} >
+                  <Card raised centered>
+                    <Image className="poster-fixed-size" src={completedPoster.image} />
+                    <Card.Content style={{textAlign: "center"}}>
+                      <Card.Header style={{fontSize: 20}}>
+                        {completedPoster.band.name}
+                      </Card.Header>
+                      <Card.Description style={{ fontSize: 16, textAlign: "center"}}>
+                        {completedPoster.date}
+                        <br />
+                        <br />
+                        {completedPoster.venue}
+                        <br />
+                        <br />
+                        {completedPoster.location}
+                      </Card.Description>
+                    </Card.Content>
+                    <Card.Content extra style={{ fontSize: 16, textAlign: "center", color: "black"}}>
+                      {completedPoster.dimensions}
+                      <br />
+                      Edition of {completedPoster.edition}
+                    </Card.Content>
+                  </Card>
+                </Grid.Column>
+              ))}
+            </Grid>
+          </>
+          :
+          <>
+            <p style={{fontSize:"18px", fontStyle:"italic", textAlign: "center"}}>
+              Complete projects to add your latest and greatest posters here!
+            </p>
+          </>
+        }
         <br />
     </>
   )
