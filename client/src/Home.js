@@ -135,14 +135,14 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
     return (
       <>
         <div>
-          <br />
+          {/* <br /> */}
           <Divider horizontal style={{fontSize: 24}}>Welcome to Gig Prints</Divider>
-          <br />
+          {/* <br /> */}
           <div style={{backgroundColor:"#6834CC"}}>
             <Slideshow />
           </div>
-          <br/>
-          <Divider horizontal style={{fontSize: 20}}>Discover - Connect - Create</Divider>
+          {/* <br/> */}
+          <Divider horizontal style={{fontSize: 20, marginBottom: "0px"}}>Discover - Connect - Create</Divider>
           <br/>
         </div>
       </>

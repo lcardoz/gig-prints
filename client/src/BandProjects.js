@@ -193,7 +193,8 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
     <>
     <br />
     <Divider horizontal style={{fontSize: 20}}>My Projects</Divider>
-      <Table celled style={{marginTop: "35px"}}>
+    {/* <div style={{margin: "0 auto", width: "1140px"}}> */}
+      <Table centered celled style={{ textAlign: "center", marginTop: "35px"}}>
       <Table.Header style={{textAlign: "center"}}>
         <Table.Row>
           <Table.HeaderCell singleLine>Concert Date</Table.HeaderCell>
@@ -212,7 +213,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
       <Table.Body style={{textAlign: "center"}}>
         {bandPosters.map((eachPoster) => (
             <Table.Row key={eachPoster.id} >
-              <Table.Cell >
+              <Table.Cell singleLine>
                 {editingId === eachPoster.id ?
                   <Form.Input fluid
                     name="date"
@@ -222,7 +223,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
                 : eachPoster.date
                 }
               </Table.Cell>
-              <Table.Cell>
+              <Table.Cell singleLine>
                 {editingId === eachPoster.id ?
                   <Form.Input fluid
                     name="venue"
@@ -232,7 +233,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
                 : eachPoster.venue
                 }              
               </Table.Cell>
-              <Table.Cell>
+              <Table.Cell singleLine>
                 {editingId === eachPoster.id ?
                   <Form.Input fluid
                     name="location"
@@ -242,7 +243,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
                 : eachPoster.location
                 }
               </Table.Cell>
-              <Table.Cell>
+              <Table.Cell singleLine>
                 {editingId === eachPoster.id ?
                   <Form.Select fluid
                     name="designer_id"
@@ -283,7 +284,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
                 }
               </Table.Cell>
               {/* BAND CANNOT EDIT THE IMAGE LINK */}
-              {eachPoster.image != null ? <Table.Cell><a href={eachPoster.image} alt="image link">Image Link</a></Table.Cell> : <Table.Cell style={{color: "red"}}>TBD</Table.Cell> }
+              {eachPoster.image != null ? <Table.Cell><a href={eachPoster.image} alt="image link" style={{color:"#6834CC"}}>Image Link</a></Table.Cell> : <Table.Cell style={{color: "red"}}>TBD</Table.Cell> }
               <Table.Cell>
                 {editingId === eachPoster.id ?
                   <Form.Input fluid
@@ -416,6 +417,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
         <br />
       </>
       : <></>}
+      {/* </div> */}
     </>
   )
 }
