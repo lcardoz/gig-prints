@@ -107,11 +107,11 @@ const DifferentBandProfile = ({posters, setSearch}) => {
           <Grid.Column key={completedPoster.id} >
             <Card raised centered>
               <Image className="poster-fixed-size" src={completedPoster.image} />
-              <Card.Content>
+              <Card.Content style={{textAlign: "center"}}>
                 <Card.Header style={{fontSize: 20}}>
                   {completedPoster.designer.name}
                 </Card.Header>
-                <Card.Description style={{fontSize: 16}}>
+                <Card.Description style={{fontSize: 16, textAlign: "center"}}>
                   {completedPoster.date}
                   <br />
                   <br />
@@ -121,9 +121,8 @@ const DifferentBandProfile = ({posters, setSearch}) => {
                   {completedPoster.location}
                 </Card.Description>
               </Card.Content>
-              <Card.Content style={{fontSize: 16}}>
+              <Card.Content style={{fontSize: 16, textAlign: "center", color: "black"}}>
                 {completedPoster.dimensions}
-                <br />
                 <br />
                 Edition of {completedPoster.edition}
               </Card.Content>
