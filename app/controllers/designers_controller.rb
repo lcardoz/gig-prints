@@ -1,4 +1,5 @@
 class DesignersController < ApplicationController
+  wrap_parameters format: []
 
   skip_before_action :authorize, only: [:index, :create, :show_different_designer]
 
@@ -29,7 +30,7 @@ class DesignersController < ApplicationController
   private
 
   def designer_params
-    params.permit(:name, :username, :password, :instagram, :website, :location, :image, :bio, :open_to_work)
+    params.permit(:name, :username, :password, :instagram, :website, :location, :image, :bio, :open_to_work, :email)
   end
 
 end

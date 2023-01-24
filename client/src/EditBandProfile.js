@@ -12,7 +12,8 @@ const EditBandProfile = ({band, setBand}) => {
     instagram: band.instagram,
     website: band.website,
     bio: band.bio,
-    on_tour: band.on_tour
+    on_tour: band.on_tour,
+    email: band.email
   })
   
   const handleChange = (e) => {
@@ -67,6 +68,14 @@ const EditBandProfile = ({band, setBand}) => {
           checked={updatedBandInfo.on_tour}
           onChange={handleCheck}
         />
+          <Form.Field>
+            <label>E-mail</label>
+            <Input fluid
+              name="email"
+              value={updatedBandInfo.email}
+              onChange={handleChange}
+            />
+          </Form.Field>
           <Form.Field>
             <label>Profile Picture</label>
             <Input fluid

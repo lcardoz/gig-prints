@@ -12,7 +12,8 @@ const EditDesignerProfile = ({designer, setDesigner}) => {
     instagram: designer.instagram,
     website: designer.website,
     bio: designer.bio,
-    open_to_work: designer.open_to_work
+    open_to_work: designer.open_to_work,
+    email: designer.email
   })
 
   const handleChange = (e) => {
@@ -67,6 +68,14 @@ const EditDesignerProfile = ({designer, setDesigner}) => {
           checked={updatedDesignerInfo.open_to_work}
           onChange={handleCheck}
         />
+          <Form.Field>
+            <label>E-mail</label>
+            <Input fluid
+              name="email"
+              value={updatedDesignerInfo.email}
+              onChange={handleChange}
+            />
+          </Form.Field>
           <Form.Field>
             <label>Profile Picture</label>
             <Input fluid

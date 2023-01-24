@@ -1,5 +1,6 @@
 class BandsController < ApplicationController
-
+  wrap_parameters format: []
+  
   skip_before_action :authorize, only: [:index, :create, :show_different_band]
 
   def index
@@ -29,7 +30,7 @@ class BandsController < ApplicationController
   private
 
   def band_params
-    params.permit(:name, :username, :password, :instagram, :website, :location, :image, :bio, :on_tour)
+    params.permit(:name, :username, :password, :instagram, :website, :location, :image, :bio, :on_tour, :email)
   end
 
 
