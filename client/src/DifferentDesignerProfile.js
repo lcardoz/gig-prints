@@ -48,7 +48,7 @@ const DifferentDesignerProfile = ({posters}) => {
             <Image src={differentDesigner.image ? differentDesigner.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={differentDesigner.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
           <Grid.Column>
-            {differentDesigner.open_to_work ? <p><Icon className="check square" color="violet"></Icon>Open To Work!</p> : null}
+            {differentDesigner.open_to_work ? <p><Icon className="check square" color="violet"></Icon>Open To Work!</p> : <p><Icon className="x" color="violet"></Icon>Not Taking Commissions</p>}
             {differentDesigner.instagram ? <><p><Icon className="instagram"></Icon>{differentDesigner.instagram}</p></> : null}
             {differentDesigner.location ? <p><Icon className="location arrow" color="violet"></Icon> {differentDesigner.location}</p> : null}
             {differentDesigner.website ? <><p>Get the latest on {differentDesigner.name}<a href={differentDesigner.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 

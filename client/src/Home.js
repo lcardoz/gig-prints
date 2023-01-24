@@ -73,7 +73,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
                   </Card.Description>
                 </Card.Content>
                 <Card.Content className="content-fixed-size" style={{fontSize: 16, textAlign: "center"}}>
-                  {designer.open_to_work ? <p style={{color: "black"}}><Icon className="check square" color="violet"></Icon>Open To Work!</p> : <br /> }
+                  {designer.open_to_work ? <p style={{color: "black"}}><Icon className="check square" color="violet"></Icon>Open To Work!</p> : <p style={{color: "black"}}><Icon className="x" color="violet"></Icon>Not Taking Commissions</p> }
                 </Card.Content>
               </Card>
               <br />
@@ -122,7 +122,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
                   </Card.Description>
                 </Card.Content>
                 <Card.Content className="content-fixed-size" style={{fontSize: 16, textAlign: "center"}}>
-                  {band.on_tour ? <p style={{color: "black"}}><Icon className="check square" color="violet"></Icon>On Tour!</p> : <br /> }
+                  {band.on_tour ? <p style={{color: "black"}}><Icon className="check square" color="violet"></Icon>On Tour!</p> : <p style={{color: "black"}}><Icon className="x" color="violet"></Icon>Not Touring</p> }
                 </Card.Content>
               </Card>
               <br />

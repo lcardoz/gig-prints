@@ -39,7 +39,7 @@ const BandProfile = ({band, posters}) => {
             <Image src={band.image ? band.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={band.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
           <Grid.Column>
-            {band.on_tour ? <p><Icon className="check square" color="violet"></Icon>On Tour!</p> : null}
+            {band.on_tour ? <p><Icon className="check square" color="violet"></Icon>On Tour!</p> : <p><Icon className="x" color="violet"></Icon>Not Touring</p>}
             {band.instagram ? <><p><Icon className="instagram"></Icon>{band.instagram}</p></> : null}
             {band.location ? <p><Icon className="location arrow" color="violet"></Icon> {band.location}</p> : null}
             {band.website ? <><p>Get the latest on {band.name}<a href={band.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 

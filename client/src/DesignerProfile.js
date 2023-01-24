@@ -33,7 +33,7 @@ const DesignerProfile = ({designer, posters}) => {
             <Image src={designer.image ? designer.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={designer.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
           <Grid.Column>
-            {designer.open_to_work ? <p><Icon className="check square" color="violet"></Icon>Open To Work!</p> : null}
+            {designer.open_to_work ? <p><Icon className="check square" color="violet"></Icon>Open To Work!</p> : <p><Icon className="x" color="violet"></Icon>Not Taking Commissions</p>}
             {designer.instagram ? <><p><Icon className="instagram"></Icon>{designer.instagram}</p></> : null}
             {designer.location ? <p><Icon className="location arrow" color="violet"></Icon> {designer.location}</p> : null}
             {designer.website ? <><p>Get the latest on {designer.name}<a href={designer.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 

@@ -55,7 +55,7 @@ const DifferentBandProfile = ({posters, setSearch}) => {
             <Image src={differentBand.image ? differentBand.image : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} centered rounded alt={differentBand.name} style={{maxHeight: "500px", maxWidth: "400px"}}/>
           </Grid.Column>
           <Grid.Column>
-            {differentBand.on_tour ? <p><Icon className="check square" color="violet"></Icon>On Tour!</p> : null}
+            {differentBand.on_tour ? <p><Icon className="check square" color="violet"></Icon>On Tour!</p> : <p><Icon className="x" color="violet"></Icon>Not Touring</p>}
             {differentBand.instagram ? <><p><Icon className="instagram"></Icon>{differentBand.instagram}</p></> : null}
             {differentBand.location ? <p><Icon className="location arrow" color="violet"></Icon> {differentBand.location}</p> : null}
             {differentBand.website ? <><p>Get the latest on {differentBand.name}<a href={differentBand.website} alt="website" style={{color:"#6834CC"}}> here</a></p></> : null} 
