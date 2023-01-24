@@ -63,7 +63,7 @@ const DifferentBandProfile = ({posters, setSearch}) => {
             <Button className="violet ui button" onClick={handleToggle}>{showContactInfo ? "Hide Info" : "Contact Info"}</Button>
             {showContactInfo ? 
             <>
-              <p style={{marginTop: "10px"}}>{differentBand.name}<Button icon="clone outline" onClick={handleClick} style={{marginLeft: "5px"}}></Button></p>
+              <p style={{marginTop: "10px"}}>{differentBand.email}<Button icon="clone outline" onClick={handleClick} style={{marginLeft: "5px"}}></Button></p>
             </> 
             : <><br /><br /><br /></>
             }

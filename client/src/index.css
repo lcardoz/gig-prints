@@ -80,29 +80,7 @@ code {
 }
 
 
-#slideshow-container {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  z-index: 0;
-}
 
-#slideshow-image img {
-  position: cover;
-  height: 290px;
-  margin-top: -0.5em;
-}
-
-#arrows {
-  display: flex;
-  justify-content: space-between;
-  width: 900px;
-  margin-top: -14em;
-  margin-bottom: 4em;
-  z-index: 1;
-}
 
 .regular-button {
   float: right;
@@ -126,14 +104,11 @@ code {
   margin: 0 auto;
   overflow: hidden;
   max-width: 1000px;
-  /* max-height: 1000px;
-   */
 }
 
 .slideshowSlider {
   white-space: nowrap;
   transition: ease 1000ms;
-
 }
 
 .slide {
@@ -143,10 +118,9 @@ code {
   width: 100%;
   border-radius: 10px;
   margin-top: 30px;
-  /* margin-bottom: 30px; */
 }
 
-/* Buttons */
+/* Slideshow Buttons */
 
 .slideshowDots {
   text-align: center;
@@ -160,9 +134,9 @@ code {
   border-radius: 50%;
   cursor: pointer;
   margin: 15px 7px 0px;
-  background-color: #c4c4c4;
+  background-color: white;
 }
 
 .slideshowDot.active {
-  background-color: #23a6d5;
+  background-color: #e73ce7;
 }
