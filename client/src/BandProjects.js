@@ -193,8 +193,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
     <>
     <br />
     <Divider horizontal style={{fontSize: 20}}>My Projects</Divider>
-    {/* <div style={{margin: "0 auto", width: "1140px"}}> */}
-      <Table centered celled style={{ textAlign: "center", marginTop: "35px"}}>
+      <Table celled style={{ textAlign: "center", marginTop: "35px"}}>
       <Table.Header style={{textAlign: "center"}}>
         <Table.Row>
           <Table.HeaderCell singleLine>Concert Date</Table.HeaderCell>

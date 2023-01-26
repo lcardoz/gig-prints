@@ -42,28 +42,20 @@ const Slideshow = () => {
     };
   }, [index]);
 
-
-
   return (
     <div className="slideshow">
       <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
         {slideImages.map((image, index) => (      
           <>
-          <img
-            className="slide"
-            key={index}
-            src={slideImages[index]}
-            alt="homepage"
-          />
-          {/* <h1>Test</h1> */}
+            <img
+              className="slide"
+              key={index}
+              src={slideImages[index]}
+              alt="homepage"
+            />
           </> 
         ))}
       </div>
-      {/* <div>
-        {slideCaptions.map((index) => (
-          <h1 key={index} style={{color: "black", backgroundColor: "white"}}>{slideCaptions[index]}</h1>
-        ))}  
-      </div> */}
       <div className="slideshowDots">
         {slideImages.map((_, idx) => (
           <div key={idx} className={`slideshowDot${index === idx ? " active" : ""}`} onClick={() => {setIndex(idx);}}>

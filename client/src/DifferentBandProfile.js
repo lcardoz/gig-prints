@@ -136,7 +136,7 @@ const DifferentBandProfile = ({posters, setSearch}) => {
           :
           <>
             <p style={{fontSize:"18px", fontStyle:"italic", textAlign: "center"}}>
-              Complete projects to add your latest and greatest posters here!
+              {differentBand.name} hasn't commissioned any posters yet... Check back soon!
             </p>
           </>
         }

@@ -169,7 +169,7 @@ sleep = Band.create(
   instagram: "sleeptheband",
   website: "https://www.weedian.com/",
   location: "San Jose, CA",
-  image: "https://media.pitchfork.com/photos/5929b53313d197565213ac14/1:1/w_600/d0f32fc9.jpeg",
+  image: "https://i0.wp.com/liveforlivemusic.com/wp-content/uploads/2021/04/sleep-iommic-life.jpeg?fit=2048%2C1024&ssl=1",
   bio: "Even during their near two-decade studio absence, SLEEP's influence loomed large over metal and stoner rock. Formed in 1990 in San Jose, CA, the power trio found immediate acclaim after the release of their debut album Volume One in 1991, and the accolades never ceased.",
   on_tour: false,
   email: "weed@sleep.com"
@@ -266,12 +266,116 @@ skrillex = Band.create(
   email: "merch@skrillex.com"
 )
 
+deadmau5 = Band.create(
+  name: "Deadmau5",
+  username: "deadmau5",
+  password: "Dead123!",
+  instagram: "deadmau5",
+  website: "https://deadmau5.com/",
+  location: "Niagara Falls, Canada",
+  image: "https://www.billboard.com/wp-content/uploads/2022/06/deadmau5-cr-Leah-Sems-press-2022-billboard-1548.jpg?w=1024",
+  bio: "Born in Ontario, Canada a young Joel, who already showed a knack for electronics, began work in Animation and Web Design before eventually shifting to working on music, first experimenting with Chiptune sounds. He took on the moniker Deadmau5 after he found the body of a frozen rodent in a computer he had built.",
+  on_tour: true,
+  email: "merch@deadmau5.com"
+)
+
+eden = Band.create(
+  name: "EDEN",
+  username: "eden",
+  password: "Eden123!",
+  instagram: "iameden",
+  website: "https://iameden.eu/",
+  location: "Dublin, Ireland",
+  image: "https://heremag-prod-app-deps-s3heremagassets-bfie27mzpk03.s3.amazonaws.com/wp-content/uploads/2019/12/18133056/EDEN_PRESS_31-DREW-ESCRIVA-1200x800.jpg",
+  bio: "What started as the dance-oriented Eden Project morphed into something different for Irish singer/songwriter Jonathon Ng, who shifted into more song-based indie electronic territory under the name EDEN during the latter half of the 2010s. With his 2018 album Vertigo, he earned acclaim and a notable amount of chart success on both sides of the Atlantic. Likewise, his next LP, 2020's No Future, hit number 26 on the Billboard 200. EDEN returned in 2022 with ICYMI, a pensive album wrought with themes of loss and ephemerality.",
+  on_tour: true,
+  email: "edenireland@gmail.com"
+)
+
+the_rolling_stones = Band.create(
+  name: "The Rolling Stones",
+  username: "therollingstones",
+  password: "Stones123!",
+  instagram: "therollingstones",
+  website: "https://rollingstones.com/",
+  location: "London, UK",
+  image: "https://i.scdn.co/image/ab6761610000e5ebd3cb15a8570cce5a63af63d8",
+  bio: "The Rolling Stones are an English rock band formed in London in 1962. Active for six decades, they are one of the most popular and enduring bands of the rock era. In the early 1960s, the Rolling Stones pioneered the gritty, rhythmically driven sound that came to define hard rock.",
+  on_tour: false,
+  email: "merch@therollingstones.com"
+)
+
+sigur_ros = Band.create(
+  name: "Sigur Rós",
+  username: "sigurros",
+  password: "Sigur123!",
+  instagram: "sigurros",
+  website: "https://sigurros.com/",
+  location: "Reykjavík, Iceland",
+  image: "https://media.pitchfork.com/photos/633dcba518fa9c97ca35ca58/4:3/w_2016,h_1512,c_limit/Sigur-Ros.jpg",
+  bio: "Sigur Rós is an Icelandic post-rock band from Reykjavík, active since 1994. The band comprises singer and guitarist Jón Þór 'Jónsi' Birgisson, bassist Georg Hólm, and keyboardist Kjartan Sveinsson.",
+  on_tour: true,
+  email: "merch@sigurros.com"
+)
+
+alabama_shakes = Band.create(
+  name: "Alabama Shakes",
+  username: "alabamashakes",
+  password: "Shakes123!",
+  instagram: "alabama_shakes",
+  website: "https://www.alabamashakes.com/",
+  location: "Athens, AL",
+  image: "https://cdn.britannica.com/29/185429-050-DBE65C2B/Alabama-Shakes-rock-band-members-Heath-Fogg-Zac.jpg",
+  bio: "Alabama Shakes are an American rock band formed in Athens, Alabama, in 2009. The band consists of lead singer and guitarist Brittany Howard, guitarist Heath Fogg, bassist Zac Cockrell, and drummer Steve Johnson.",
+  on_tour: false,
+  email: "merch@alabamashakes.com"
+)
+
+radiohead = Band.create(
+  name: "Radiohead",
+  username: "radiohead",
+  password: "Radio123!",
+  instagram: "radiohead",
+  website: "https://radiohead.com/",
+  location: "London, UK",
+  image: "https://www.nme.com/wp-content/uploads/2019/03/radiohead_2000.jpg",
+  bio: "Radiohead are an English rock band formed in Abingdon, Oxfordshire, in 1985. The band consists of Thom Yorke; brothers Jonny Greenwood and Colin Greenwood; Ed O'Brien; and Philip Selway. They have worked with the producer Nigel Godrich and the cover artist Stanley Donwood since 1994.",
+  on_tour: false,
+  email: "tour@radiohead.com"
+)
+
+dave_matthews_band = Band.create(
+  name: "Dave Matthews Band",
+  username: "davematthewsband",
+  password: "Dave123!",
+  instagram: "davematthewsband",
+  website: "https://davematthewsband.com/",
+  location: "Charlottesville, VA",
+  image: "https://www.313presents.com/assets/img/313-Presents-Dave-Matthews-Band-600x600-451918ecf9.jpg",
+  bio: "Dave Matthews Band is an American rock band formed in Charlottesville, Virginia, in 1991. The band's founding members were singer-songwriter and guitarist Dave Matthews, bassist Stefan Lessard, drummer and backing vocalist Carter Beauford, violinist and backing vocalist Boyd Tinsley, and saxophonist LeRoi Moore.",
+  on_tour: true,
+  email: "merch@davematthewsband.com"
+)
+
+future_islands = Band.create(
+  name: "Future Islands",
+  username: "futureislands",
+  password: "Future123!",
+  instagram: "futureislands",
+  website: "https://future-islands.com/",
+  location: "Baltimore, MD",
+  image: "https://static.independent.co.uk/2020/10/06/15/newFile-6.jpg?quality=75&width=982&height=726&auto=webp",
+  bio: "Future Islands is an American synth-pop band based in Baltimore, Maryland, comprising Gerrit Welmers, William Cashion, Samuel T. Herring, and Michael Lowry.",
+  on_tour: true,
+  email: "tour@futureislands.com"
+)
+
 # Band.create(
 #   name: "",
 #   username: "",
 #   password: "",
 #   instagram: "",
-#   website: "https://www.",
+#   website: "",
 #   location: "",
 #   image: "",
 #   bio: "",
@@ -542,13 +646,104 @@ michelle_urra = Designer.create(
   email: "hi@michelleurra.com"
 )
 
+zoltron = Designer.create(
+  name: "Zoltron",
+  username: "zoltron",
+  password: "Zoltron123!",
+  instagram: "zoltron",
+  website: "https://zzz.zoltron.com/",
+  location: "San Francisco, CA",
+  image: "https://cdn.booooooom.com/wp-content/uploads/2018/09/zoltron-pic.jpg",
+  bio: "Zoltron is an enigma. A Self proclaimed 80's teen idol, Zoltron's wave hairdo and unique California accent epitomized a certain level of cool, which inevitably paved the way to his success as a visual artist and graphic designer. Zoltron's artwork has been shown in galleries throughout the world, collected and archived by major museums and institutions including the U.S. Prints Division of the Library of Congress, The Museum of Fine Arts Boston, The Los Angeles Contemporary Museum of Art, The Victoria Albert Museum, London and The Rock and Roll Hall of Fame Museum ∆",
+  open_to_work: true,
+  email: "zoltron@zoltron.com"
+)
+
+marq_spusta = Designer.create(
+  name: "Marq Spusta",
+  username: "spusta",
+  password: "Spusta123!",
+  instagram: "spustastudio",
+  website: "https://www.marqspusta.com/",
+  location: "San Francisco, CA",
+  image: "https://i.ytimg.com/vi/hazCFVlMKpE/maxresdefault.jpg",
+  bio: "Marq Spusta is an artist type of fellow. He gets into a variety of projects, from designing concert posters to exhibiting intricate paintings. Marq lives and works alongside his wife and two small children in their home on the California Coast.",
+  open_to_work: true,
+  email: "marq@marqspusta.com"
+)
+
+chuck_sperry = Designer.create(
+  name: "Chuck Sperry",
+  username: "chucksperry",
+  password: "Chuck123!",
+  instagram: "yosquirt",
+  website: "https://chucksperry.net/",
+  location: "San Francisco, CA",
+  image: "https://upload.wikimedia.org/wikipedia/commons/2/21/2014_Sperry_Studio.jpg",
+  bio: "Chuck Sperry lives in the Haight-Ashbury district of San Francisco, where he's made his particular style of rock poster designs for over 20 years. He operates Hangar 18, a silkscreen print studio, located in Oakland. Sperry works in San Francisco, but exhibits internationally from Athens to Argentina, Bristol to Belgrade (visited Belgrade at the invitation of The Cultural Minster of Serbia). By conducting workshops and lectures all over the planet, Sperry's tutelage has inspired a new generation of rock poster and silkscreen artists worldwide.",
+  open_to_work: true,
+  email: "sperry@chucksperry.com"
+)
+
+stanley_donwood = Designer.create(
+  name: "Stanley Donwood",
+  username: "stanleydonwood",
+  password: "Stan123!",
+  instagram: "stanleydonwood",
+  website: "https://www.slowlydownward.com/",
+  location: "London, UK",
+  image: "https://wp.penguin.co.uk/wp-content/uploads/2020/02/stanley_ac.jpg",
+  bio: "Among the projects he has done are the artwork for Radiohead's records, an early cyber conference, depressing flyposters, many short stories, a pulp-noir-thriller, a record company, book covers for JG Ballard's novels, art direction for a film about nuclear weapons, the artwork for Glastonbury Festival, a book about holloways with Robert Macfarlane, art installations in Bristol, London, the Netherlands and Sydney, as well as exhibitions worldwide. The best way to find out what he is filling the days with is to look at his instagram or twitter accounts.",
+  open_to_work: true,
+  email: "stanley@slowlydownward.com"
+)
+
+james_flames = Designer.create(
+  name: "James Flames",
+  username: "jamesflames",
+  password: "James123!",
+  instagram: "thejamesflames",
+  website: "https://www.jamesflames.com/",
+  location: "Asheville, NC",
+  image: "https://ashevillemade.com/wp-content/uploads/2019/08/James-Flames-Portrait-4-RZ-683x1024.jpg",
+  bio: "One day, when James Flames was a very little boy, someone had the good sense to sit him down in front of a stack of paper and put a pencil in his hand. And so he began to draw. And draw. And draw, and draw. Now, years later, after many adventures in his hometown of Brooklyn, NY, James works and resides within the beautiful Blue Ridge Mountains of North Carolina. His artwork has been featured in galleries near and far — from London to L.A., NY to NC. And he creates rock posters for some of the top touring bands out on the road today — posters which he screen prints by hand in his little studio tucked away in the woods. His techniques may have evolved over time, but it always comes back to the beginning — the stack of paper never far, the pencil always in hand.",
+  open_to_work: true,
+  email: "jamesflames@gmail.com"
+)
+
+drew_millward = Designer.create(
+  name: "Drew Millward",
+  username: "drewmillward",
+  password: "Drew123!",
+  instagram: "drewmillward",
+  website: "http://www.drewmillward.portfoliobox.me/",
+  location: "Leeds, UK",
+  image: "https://cdn.shopify.com/s/files/1/1695/7897/articles/Drew-Millward-Northern-Monk-video-thumbnail_800x.jpg?v=1618387050",
+  bio: "Drew Millward was born in 1981 in Coventry; he grew up in Bolton, studied and lived in Leeds for many years and now lives in a quarry in the Aire Valley, with his wife and son. He has been drawing pictures since around 2004. Drew likes to draw 'the old fashioned way', using pencils, pens and a love of the craft of illustration, but is incresingly reliant on digital methods to create his work. You have to move with the times. While his subject matter can vary dramatically, he hopes that the attention to detail and the love of drawing is apparent throughout his work. He has exhibited throughout the US, UK, Europe and beyond, as well as having the pleasure of creating work for an ever growing international client base.",
+  open_to_work: true,
+  email: "drewmillward@gmail.com"
+)
+
+aj_masthay = Designer.create(
+  name: "AJ Masthay",
+  username: "ajmasthay",
+  password: "Masthay123!",
+  instagram: "ajmasthay",
+  website: "https://www.masthaystudios.com/",
+  location: "Hartford, CT",
+  image: "https://cdn.shopify.com/s/files/1/0153/2051/products/IMG_6881_1024x1024.jpg?v=1616282693",
+  bio: "Born in 1975, AJ Masthay has lived in Connecticut his entire life. He attended the Hartford Art School where he majored in printmaking with an art history minor, graduating with a Bachelor of Fine Arts in 1997. Masthay established his own letterpress studio in 2001 and is currently based out of Hartford, CT. Clients include The Grateful Dead, Black Sabbath, Dead and Company, Foo Fighters, South Park, Queens of the Stone Age, The Jerry Garcia Estate, Widespread Panic, Umphrey's McGee and many more. Outside of the studio, AJ enjoys time with his wife Kara and two Labrador retrievers (Dexter and Halley) in their West Hartford, CT home. Other interests include treasure hunting at the local flea markets and all things natural history related including an extensive osteology (skull) collection.",
+  open_to_work: true,
+  email: "aj@masthaystudios.com"
+)
+
 
 # Designer.create(
 #   name: "",
 #   username: "",
 #   password: "",
 #   instagram: "",
-#   website: "https://www.",
+#   website: "",
 #   location: "",
 #   image: "",
 #   bio: "",
@@ -944,6 +1139,20 @@ Poster.create(
 )
 
 Poster.create(
+  band_id: future_islands.id,
+  designer_id: brian_blomerth.id,
+  image: "https://pbs.twimg.com/media/FOAU2noVsAM2d1D?format=jpg&name=4096x4096",
+  date: "March 25, 2022",
+  venue: "Alexandra Palace",
+  location: "London, UK",
+  edition: 150,
+  status: "complete",
+  duedate: "02/25/2022",
+  budget: "$7,500",
+  dimensions: "18x24"
+)
+
+Poster.create(
   band_id: dead_and_co.id,
   designer_id: brian_blomerth.id,
   image: "https://www.brianblomerth.com/posters/dead&co/websitedeadandco.jpg",
@@ -1121,7 +1330,103 @@ Poster.create(
   dimensions: "18x24"
 )
 
+Poster.create(
+  band_id: primus.id,
+  designer_id: zoltron.id,
+  image: "https://posterdrops-images.s3.amazonaws.com/art_images/zoltron-primus-newyears-poster-2017_800_1627418388.webp",
+  date: "December 31, 2017",
+  venue: "Fox Theater",
+  location: "Oakland, CA",
+  edition: 500,
+  status: "complete",
+  duedate: "11/31/2017",
+  budget: "$25,000",
+  dimensions: "18x24"
+)
 
+Poster.create(
+  band_id: the_rolling_stones.id,
+  designer_id: marq_spusta.id,
+  image: "http://www.marqspusta.com/wp-content/gallery/stonessixty/Screen-Shot-2022-11-29-at-10.10.40-AM.png",
+  date: "Sixty Tour 2023",
+  venue: "Multiple Venues",
+  location: "U.S.A.",
+  edition: 150,
+  status: "complete",
+  duedate: "12/01/2022",
+  budget: "$25,000",
+  dimensions: "18x24"
+)
+
+Poster.create(
+  band_id: alabama_shakes.id,
+  designer_id: chuck_sperry.id,
+  image: "http://chucksperry.net/wp-content/uploads/2015/08/ALABAMA-SHAKES-SPERRY.jpg",
+  date: "August 16, 2015",
+  venue: "Red Rocks Amphitheatre",
+  location: "Morrison, CO",
+  edition: 250,
+  status: "complete",
+  duedate: "07/16/2015",
+  budget: "$25,000",
+  dimensions: "21x29"
+)
+
+Poster.create(
+  band_id: radiohead.id,
+  designer_id: stanley_donwood.id,
+  image: "https://www.juxtapoz.com/images_old/stories/2012/Oct2012/Oct10/terrordome_photo2.jpeg",
+  date: "October 8-9, 2012",
+  venue: "Greenwich Peninsula",
+  location: "London, UK",
+  edition: 188,
+  status: "complete",
+  duedate: "09/08/2012",
+  budget: "$20,000",
+  dimensions: "19x25"
+)
+
+Poster.create(
+  band_id: dave_matthews_band.id,
+  designer_id: james_flames.id,
+  image: "https://assets.bigcartel.com/product_images/220634314/DaveMatthewsBand-HolmdelNJ2018-FinalPrint.jpg?auto=format&fit=max&w=1800",
+  date: "July 18, 2018",
+  venue: "PNC Bank Arts Center",
+  location: "Holmdel, NJ",
+  edition: 750,
+  status: "complete",
+  duedate: "06/18/2018",
+  budget: "$15,000",
+  dimensions: "18x24"
+)
+
+Poster.create(
+  band_id: billy_strings.id,
+  designer_id: drew_millward.id,
+  image: "https://posterdrops-images.s3.amazonaws.com/art_images/318458336_702165867933272_1083732693515843521_n_1670530370.webp",
+  date: "August 12, 2022",
+  venue: "02 Ritz",
+  location: "Manchester, UK",
+  edition: 50,
+  status: "complete",
+  duedate: "07/12/2022",
+  budget: "$3,000",
+  dimensions: "18x24"
+)
+
+Poster.create(
+  band_id: dead_and_co.id,
+  designer_id: aj_masthay.id,
+  image: "https://cdn.shopify.com/s/files/1/0182/2915/products/22DeadCo-Citi2-FINAL.jpg?v=1658156145",
+  date: "July 15, 2022",
+  venue: "Citi Field",
+  location: "New York, NY",
+  edition: 1800,
+  status: "complete",
+  duedate: "06/15/2022",
+  budget: "$40,000",
+  dimensions: "18x24"
+)
 
 # Poster.create(
 #   band_id: ,

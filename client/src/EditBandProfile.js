@@ -41,8 +41,8 @@ const EditBandProfile = ({band, setBand}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log('clicked submit')
-    console.log(updatedBandInfo)
+    // console.log('clicked submit')
+    // console.log(updatedBandInfo)
 
     fetch(`/bands/${band.id}`, {
       method: 'PATCH',

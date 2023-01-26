@@ -62,10 +62,10 @@ const DifferentDesignerProfile = ({posters}) => {
             }
           </Grid.Column>
         </Grid>
+        {completedDesignerPosters.length > 0 ?
+        <>
         <Divider horizontal style={{fontSize: 20}}>Recent Concert Posters</Divider>  
         <br />
-        {completedDesignerPosters.length > 0 ?
-          <>
             <br />
             <Grid centered columns={cardsPerRow} style={{textAlign: "center"}}>
               {completedDesignerPosters.map((completedPoster) => (
@@ -99,7 +99,7 @@ const DifferentDesignerProfile = ({posters}) => {
           :
           <>
             <p style={{fontSize:"18px", fontStyle:"italic", textAlign: "center"}}>
-              Complete projects to add your latest and greatest posters here!
+              {differentDesigner.name} is working on poster projects... Check back soon!
             </p>
           </>
         }

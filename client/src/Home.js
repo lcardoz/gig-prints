@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import { Card, Divider, Icon, Reveal, Grid, Image, Checkbox } from 'semantic-ui-react';
+import { Card, Divider, Icon, Reveal, Grid, Image} from 'semantic-ui-react';
 import Slideshow from './Slideshow';
 
 const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBands}) => {

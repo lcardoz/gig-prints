@@ -41,8 +41,8 @@ const EditDesignerProfile = ({designer, setDesigner}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log('clicked submit')
-    console.log(updatedDesignerInfo)
+    // console.log('clicked submit')
+    // console.log(updatedDesignerInfo)
 
     fetch(`/designers/${designer.id}`, {
       method: 'PATCH',
