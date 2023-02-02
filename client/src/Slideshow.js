@@ -9,11 +9,6 @@ const slideImages = [
   projects_screenshot
 ];
 
-// const slideCaptions = [
-//     "Facilitating Touring Bands in Discovering Talented Poster Designers",
-//     "Empowering Poster Designers to Connect with Touring Bands",
-//     "Simplifying and Centralizing the Process of Creating Concert Posters"
-// ]
 const delay = 2500;
 
 const Slideshow = () => {
