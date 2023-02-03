@@ -2,6 +2,8 @@
 
 > Welcome to Gig Prints- a web application where touring bands and poster designers are two different types of users that can both discover and connect with each other to create unique concert posters for a band's upcoming tour dates as well as manage the tasks related to seeing a poster idea to completion.
 
+Please note all artwork, poster artist information, and band information are property of their rightful respective owner. Usage of band, poster artist, and poster images are for educational, non-commercial purposes only.
+
 ## Table of Contents
 1. [Motivation](#Demo)
 1. [Demo](#Demo)
