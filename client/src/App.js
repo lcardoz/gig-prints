@@ -25,8 +25,6 @@ function App() {
   const [errors, setErrors] = useState(false)
   const [allDesigners, setAllDesigners] = useState([]);
   const [allBands, setAllBands] = useState([]);
-
-
   const [search, setSearch] = useState("")
 
   const searchedBands = allBands.filter((band)=>{
@@ -42,8 +40,6 @@ function App() {
   }
     return designer.name.toLowerCase().includes(search.toLowerCase())
   })
-
-  const [update, setUpdate] = useState(true)
 
   // console.log("band:", band)
   // console.log("designer:", designer)
@@ -88,8 +84,7 @@ function App() {
 
   return (
     <>
-
-      <Nav band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} allDesigners={allDesigners} setAllDesigners={setAllDesigners} allBands={allBands} setAllBands={setAllBands} search={search} setSearch={setSearch} searchedBands={searchedBands} searchedDesigners={searchedDesigners} />
+      <Nav band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} search={search} setSearch={setSearch} searchedBands={searchedBands} searchedDesigners={searchedDesigners} />
       <Routes>
         <Route path="/login/band" element={<LoginBand band={band} setBand={setBand} />} />
         <Route path="/login/designer" element={<LoginDesigner designer={designer} setDesigner={setDesigner} />} />
@@ -97,15 +92,14 @@ function App() {
         <Route path="/signup/band" element={<SignupBand />} />
         <Route path="/signup/designer" element={<SignupDesigner />} />
         <Route path="/signup" element={<Signup />} />
-        {band ? <Route path="/bands/:id" element={<BandProfile band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} />} /> : <Route path="/bands/:id" element={<DifferentBandProfile searchedBands={searchedBands} posters={posters} setSearch={setSearch}/>} /> }
-        {designer ? <Route path="/designers/:id" element={<DesignerProfile designer={designer} posters={posters} />} /> :  <Route path="/designers/:id" element={<DifferentDesignerProfile searchedBands={searchedBands} posters={posters} />} />}
-        {band ? <Route path="/bands/:id/projects" element={<BandProjects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
-        {designer ? <Route path="/designers/:id/projects" element={<DesignerProjects band={band} setBand={setBand} designer={designer} setDesigner={setDesigner} posters={posters} setPosters={setPosters} update={update} />} /> : null}
+        {band ? <Route path="/bands/:id" element={<BandProfile band={band} posters={posters} />} /> : <Route path="/bands/:id" element={<DifferentBandProfile posters={posters} />} /> }
+        {designer ? <Route path="/designers/:id" element={<DesignerProfile designer={designer} posters={posters} />} /> :  <Route path="/designers/:id" element={<DifferentDesignerProfile posters={posters} />} />}
+        {band ? <Route path="/bands/:id/projects" element={<BandProjects band={band} posters={posters} setPosters={setPosters} />} /> : null}
+        {designer ? <Route path="/designers/:id/projects" element={<DesignerProjects designer={designer} posters={posters} setPosters={setPosters} />} /> : null}
         {band ? <Route path="/bands/:id/edit-profile" element={<EditBandProfile band={band} setBand={setBand} />} /> : null}
         {designer ? <Route path="/designers/:id/edit-profile" element={<EditDesignerProfile designer={designer} setDesigner={setDesigner} />} /> : null}
-        <Route path= "/" element={<Home band={band} designer={designer} allDesigners={allDesigners} setAllDesigners={setAllDesigners} allBands={allBands} setAllBands={setAllBands} /> } />
+        <Route path= "/" element={<Home band={band} designer={designer} allDesigners={allDesigners} setAllDesigners={setAllDesigners} allBands={allBands} setAllBands={setAllBands} />} />
       </Routes>
-
     </>
   );
 }

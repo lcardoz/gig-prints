@@ -34,4 +34,3 @@ class DesignersController < ApplicationController
   end
 
 end
-

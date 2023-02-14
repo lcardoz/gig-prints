@@ -260,7 +260,7 @@ skrillex = Band.create(
   instagram: "skrillex",
   website: "https://www.skrillex.com/",
   location: "Los Angeles, CA",
-  image: "https://yt3.googleusercontent.com/NgDCsOjvd9c0Z0zWObIHeFLiyyxWvUq2jQn-aWPu45VOMOWNGDsyA4_a7HYLvUs3QSpK_rIEvvc=s900-c-k-c0x00ffffff-no-rj",
+  image: "https://readdork.com/wp-content/uploads/2023/01/Skrillex_by_Marilyn_Hue1.jpg",
   bio: "Sonny Moore found club and mainstream stardom in 2008, when he swapped his gig as the frontman in post-hardcore band From First to Last for the dancefloor-oriented project Skrillex. He originally used the name for live DJ sets, but at the beginning of the 2010s he moved the project into the studio where he remixed prominent acts like Lady Gaga and Bruno Mars. Over the next decade, Skrillex became a high-profile artist himself with a string of Grammy Awards for EPs like Scary Monsters and Bangarang as well as the full-length Jack Ü, a collaborative project with fellow DJ/producer Diplo.",
   on_tour: true,
   email: "merch@skrillex.com"
@@ -681,7 +681,7 @@ chuck_sperry = Designer.create(
   location: "San Francisco, CA",
   image: "https://upload.wikimedia.org/wikipedia/commons/2/21/2014_Sperry_Studio.jpg",
   bio: "Chuck Sperry lives in the Haight-Ashbury district of San Francisco, where he's made his particular style of rock poster designs for over 20 years. He operates Hangar 18, a silkscreen print studio, located in Oakland. Sperry works in San Francisco, but exhibits internationally from Athens to Argentina, Bristol to Belgrade (visited Belgrade at the invitation of The Cultural Minster of Serbia). By conducting workshops and lectures all over the planet, Sperry's tutelage has inspired a new generation of rock poster and silkscreen artists worldwide.",
-  open_to_work: true,
+  open_to_work: false,
   email: "sperry@chucksperry.com"
 )
 

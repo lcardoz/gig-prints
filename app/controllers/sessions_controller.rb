@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    # session.delete :user_id
+
     if(session[:band_id])
       session.delete :band_id
     else

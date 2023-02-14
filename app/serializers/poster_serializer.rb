@@ -3,5 +3,4 @@ class PosterSerializer < ActiveModel::Serializer
   has_one :band
   has_one :designer
 
-
 end

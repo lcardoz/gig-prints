@@ -53,7 +53,6 @@ const LoginBand = ({setBand}) => {
     )
 	}
 
-
   return (
     <div>
       <br />

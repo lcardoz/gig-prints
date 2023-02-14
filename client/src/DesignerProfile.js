@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-// import { useParams } from 'react-router-dom'
 import { Divider, Grid, Image, Icon, Button } from 'semantic-ui-react';
 import DesignerPosterCard from './DesignerPosterCard';
 
@@ -20,8 +19,6 @@ const DesignerProfile = ({designer, posters}) => {
     }
   }
 
-  // const { id } = useParams()
-  // console.log(id)
   // console.log(designer)
 
   return (

@@ -1,8 +1,8 @@
 # GIG PRINTS
 
-> Welcome to Gig Prints- a web application where touring bands and poster designers are two different types of users that can both discover and connect with each other to create unique concert posters for a band's upcoming tour dates as well as manage the tasks related to seeing a poster idea to completion.
+Welcome to Gig Prints- a single-page web application where touring bands and poster designers are two different types of users that can both discover and connect with each other to create unique concert posters for a band's upcoming tour dates as well as manage the tasks related to seeing a poster idea to completion.
 
-Please note all artwork, poster artist information, and band information are property of their rightful respective owner. Usage of band, poster artist, and poster images are for educational, non-commercial purposes only.
+> Please note all artwork, poster artist information, and band information are property of their rightful respective owner. Usage of band, poster artist, and poster images are for educational, non-commercial purposes only.
 
 ## Table of Contents
 1. [Motivation](#Demo)
@@ -14,12 +14,12 @@ Please note all artwork, poster artist information, and band information are pro
 1. [Installing Dependencies](#installing-dependencies)
 
 ## Motivation
-> I am an avid concert-goer and concert poster collector, and prior to becoming a software engineer, I spent my entire working career in different facets of the live music industry. As soon as I arrive at a concert, the first thing I do is check out the merch stands, hoping there is a beautiful and unique limited edition poster for sale. 8/10 times, there is isn't a poster for sale- which is a big missed opportunity for everyone involved- the independent poster artist who gets to share their artistic vision with a whole new fan base and see their name on a world-famous band's concert poster, the band (which in this day and age of streaming pretty much only makes money through touring) can add a new revenue stream and have unique pieces of art to commemorate their historic concerts, and the fan- who gets the opportunity to own a very special limited edition show of beauty and forever have a souvenir of a meaningful musical experience. 
+I am an avid concert-goer and poster collector, and prior to becoming a software engineer, I spent my entire working career in different facets of the live music industry. As soon as I arrive at a concert, the first thing I do is visit the merch stand, hoping there is a cool limited edition poster for sale. I'd estimate that 8/10 concerts I attend do not have a poster for sale, which is a huge missed opportunity for everyone involved: the independent poster designer, who would have a chance to share their artistic vision with a whole new audience, the band, who would add a new revenue stream, and the fans, who would be able to own a unique, tangible piece of that special concert experience forever.
 
-> I decided to build a real-world web app to help bands discover the best poster designers from all over the world, to facilitate poster designers in showcasing their work and easily connect with bands on tour, and simplify and centralize the process of creating concert posters so that more poster designers are booked to create posters, and more bands recognize the talent that's available and feel encouraged to add concert posters to their merch booth offerings.
+> I decided to build a real-world web application to help bands discover the best poster designers from all over the world, to facilitate poster designers in showcasing their work and easily connecting with bands on tour, and to simplify and centralize the process of creating concert posters so that more poster designers are booked for poster projects, and more bands recognize the supply of talent that's available and feel compelled to respond to the demand and add concert posters to their merch offerings.
 
 ## Demo
-![Gig Prints Demo](LINK HERE)
+![Gig Prints Demo](https://vimeo.com/798881890)
 
 ## Tech
 * Front End
@@ -43,8 +43,8 @@ Please note all artwork, poster artist information, and band information are pro
 
 ## Usage
 
-* To start Rails server, rails s
-* To start local React server, npm start
+* To start Rails server: rails s
+* To start local React server: npm start
 
 ## Requirements
 

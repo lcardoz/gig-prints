@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-
-  # are the routes for messages & chats needed/correct?
-  resources :messages, only: [:index, :show, :create]
-  resources :chats, only: [:index, :show, :create]
-
   resources :posters, except: [:show]
   resources :designers, only: [:index, :create, :update]
   resources :bands, only: [:index, :create, :update]
@@ -21,9 +16,5 @@ Rails.application.routes.draw do
   get '/authorized/designer', to: "designers#show"
 
   delete '/logout', to: "sessions#destroy"
-
-
-  # get '/bands/:id', to: 'bands#show_different_band'
-  # get '/designers/:id', to: 'designers#show_different_designer'
 
 end

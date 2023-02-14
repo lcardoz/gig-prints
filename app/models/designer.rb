@@ -1,11 +1,8 @@
 class Designer < ApplicationRecord
   has_secure_password
 
-  # gives us designer.posters instance method:
   has_many :posters
   has_many :bands, through: :posters
-  has_many :chats
-  has_many :messages
 
   validates :name, presence: true, uniqueness: true
   validates :username, presence: true, uniqueness: true

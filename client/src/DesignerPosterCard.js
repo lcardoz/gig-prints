@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Grid, Card } from 'semantic-ui-react';
+import { Image, Grid, Card } from 'semantic-ui-react';
 
 const DesignerPosterCard = ({designer, posters}) => {
 

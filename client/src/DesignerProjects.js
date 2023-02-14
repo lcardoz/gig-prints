@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import { Table, Button, Form, Divider } from 'semantic-ui-react';
 
-const DesignerProjects = ({band, designer, update, posters, setPosters}) => {
+const DesignerProjects = ({designer, posters, setPosters}) => {
   
   const [editingId, setEditingId] = useState(null);
-  const [updatedImage, setUpdatedImage] = useState({})
+  const [updatedImage, setUpdatedImage] = useState({
+    image: ""
+  })
 
   const designerPosters = posters.filter((poster) => {
     return (
@@ -30,7 +32,6 @@ const DesignerProjects = ({band, designer, update, posters, setPosters}) => {
   
   const handleSave = (id) => {
     // console.log(id)
-    // send PATCH request with formData
     fetch(`/posters/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
@@ -38,7 +39,6 @@ const DesignerProjects = ({band, designer, update, posters, setPosters}) => {
     })
     .then(res => res.json())
     .then(updatedImageData => {
-      // update data in the state
       const newPosters = posters.map(poster => {
         if (poster.id === updatedImageData.id) {
           return updatedImageData
@@ -58,7 +58,8 @@ const DesignerProjects = ({band, designer, update, posters, setPosters}) => {
     <>
       <br />
       <Divider horizontal style={{fontSize: 20}}>My Projects</Divider>
-      <Table celled style={{marginTop: "35px"}}>
+      <div className="table-container">
+      <Table className="table" celled style={{marginTop: "35px", marginBottom: "10px"}}>
         <Table.Header style={{textAlign: "center"}}>
           <Table.Row>
             <Table.HeaderCell singleLine>Band</Table.HeaderCell>
@@ -88,7 +89,7 @@ const DesignerProjects = ({band, designer, update, posters, setPosters}) => {
                 {editingId === eachPoster.id ?
                   <Form.Input fluid
                     name="image"
-                    value={eachPoster.image}
+                    value={updatedImage.image}
                     onChange={handleChange}
                   />
                 : eachPoster.image != null ? <><a href={eachPoster.image} alt="image link">Image Link</a></> : <><p style={{color: "red"}}>TBD</p></> 
@@ -106,6 +107,7 @@ const DesignerProjects = ({band, designer, update, posters, setPosters}) => {
           ))}
         </Table.Body>
       </Table>
+      </div>
     </>
   )
 }

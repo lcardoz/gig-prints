@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-// import { useParams } from 'react-router-dom'
 import { Divider, Table, Grid, Image, Icon, Button } from 'semantic-ui-react';
 import BandPosterCard from './BandPosterCard';
 

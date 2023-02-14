@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Table, Grid, Divider, Card, Image, Button, Icon } from 'semantic-ui-react';
 import { useParams } from 'react-router-dom';
 
-const DifferentBandProfile = ({posters, setSearch}) => {
+const DifferentBandProfile = ({posters}) => {
   const {id} = useParams()
   const [differentBand, setDifferentBand] = useState({});
   const [showContactInfo, setShowContactInfo] = useState(false);
@@ -16,7 +16,6 @@ const DifferentBandProfile = ({posters, setSearch}) => {
     )
   },[id])
   // console.log(differentBand)
-  // setSearch("");
 
   const unassignedBandPosters = posters.filter((poster) => {
     return (
@@ -44,7 +43,6 @@ const DifferentBandProfile = ({posters, setSearch}) => {
       console.error('Failed to copy e-mail address: ', err);
     }
   }
-
 
   return (
     <>

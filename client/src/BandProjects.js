@@ -7,7 +7,7 @@ const statusOptions = [
   { key: 'complete', text: 'complete', value: 'complete' },
 ]
 
-const BandProjects = ({band, designer, update, posters, setPosters}) => {
+const BandProjects = ({band, posters, setPosters}) => {
 
   // console.log(band)
   // console.log(band.posters)
@@ -19,7 +19,6 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
   const [newProjectFormData, setNewProjectFormData] = useState({
     band_id: band.id,
     designer_id: "",
-    // image: "",
     date: "",
     venue: "",
     location: "",
@@ -100,7 +99,6 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
             setNewProjectFormData({
               band_id: band.id,
               designer_id: "",
-              // image: "",
               date: "",
               venue: "",
               location: "",
@@ -133,7 +131,6 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
   }
 
   const handleSave = (id) => {
-    // send PATCH request with formData
     fetch(`/posters/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
@@ -141,7 +138,6 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
     })
     .then(res => res.json())
     .then(updatedPoster => {
-      // update data in the state
       const newPosters = posters.map(poster => {
         if (poster.id === updatedPoster.id) {
           return updatedPoster
@@ -154,7 +150,6 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
       setNewProjectFormData({
         band_id: band.id,
         designer_id: "",
-        // image: "",
         date: "",
         venue: "",
         location: "",
@@ -188,12 +183,12 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
     }) 
   }
   
-
   return (
     <>
     <br />
     <Divider horizontal style={{fontSize: 20}}>My Projects</Divider>
-      <Table celled style={{ textAlign: "center", marginTop: "35px"}}>
+    <div className="table-container">
+      <Table className="table" celled style={{ textAlign: "center", marginTop: "35px", marginBottom: "10px"}}>
       <Table.Header style={{textAlign: "center"}}>
         <Table.Row>
           <Table.HeaderCell singleLine>Concert Date</Table.HeaderCell>
@@ -282,7 +277,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
                 : eachPoster.budget
                 }
               </Table.Cell>
-              {/* BAND CANNOT EDIT THE IMAGE LINK */}
+              {/* band cannot edit the image link, only the designer can */}
               {eachPoster.image != null ? <Table.Cell><a href={eachPoster.image} alt="image link" style={{color:"#6834CC"}}>Image Link</a></Table.Cell> : <Table.Cell style={{color: "red"}}>TBD</Table.Cell> }
               <Table.Cell>
                 {editingId === eachPoster.id ?
@@ -317,6 +312,7 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
           ))}
       </Table.Body>
     </Table>
+    </div>
     <button className="regular-button" onClick={toggleForm} >{showAddProjectForm ? '- Hide Form' : '+ New Project'}</button>
     <br />
     <br />
@@ -416,7 +412,6 @@ const BandProjects = ({band, designer, update, posters, setPosters}) => {
         <br />
       </>
       : <></>}
-      {/* </div> */}
     </>
   )
 }

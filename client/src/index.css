@@ -18,27 +18,13 @@ code {
   height: 20rem;
   width: 25rem;
 }
-/* 
-.ui.image {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-
-
-} */
 
 .band-fixed-size {
-  /* justify-self: center;
-  object-fit: cover;
-  height: 20rem;
-  width: 25rem; */
   object-fit: contain;
   height: 100%;
   width: 100%;
   max-height: 15rem;
   max-width: 15rem;
-  /* padding: 1rem 1rem 0rem 1rem; */
 }
 
 .poster-fixed-size {
@@ -59,9 +45,7 @@ code {
 	background: linear-gradient(-45deg, #6834CC, #e73ce7, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	/* height: 100vh; */
 }
-
 
 @keyframes gradient {
 	0% {
@@ -74,9 +58,6 @@ code {
 		background-position: 0% 50%;
 	}
 }
-
-
-
 
 .regular-button {
   float: right;
@@ -141,7 +122,6 @@ code {
 }
 
 #hover-card {
-  /* border:1px solid black; */
   border-radius: 6px;
 } 
 
@@ -161,4 +141,19 @@ code {
   top: -3px;
   color: white;
   accent-color: #6834CC;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .table {
+    font-size: 0.8em;
+  }
 }

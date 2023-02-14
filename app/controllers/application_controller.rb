@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::API
-
   include ActionController::Cookies
 
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
@@ -33,4 +32,5 @@ class ApplicationController < ActionController::API
   def authorize
     render json: { error: "Not Authorized" }, status: :unauthorized unless logged_in?
   end
+
 end

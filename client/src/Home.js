@@ -1,12 +1,9 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import { Card, Divider, Icon, Reveal, Grid, Image} from 'semantic-ui-react';
+import { Card, Divider, Icon, Reveal, Grid, Image } from 'semantic-ui-react';
 import Slideshow from './Slideshow';
 
 const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBands}) => {
-
-  // const [allDesigners, setAllDesigners] = useState([]);
-  // const [allBands, setAllBands] = useState([]);
 
   const [showFiltered, setShowFiltered] = useState(false)
   const filteredDesigners = allDesigners.filter((designer) => {
@@ -39,7 +36,7 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
         })
       }})
     return (
-      <div >
+      <div >  
       <br />
         <Divider horizontal style={{fontSize: 24}}>Welcome, <i>{band.name}</i></Divider>
           <h3 style={{textAlign: "center"}}>Explore Poster Designers</h3>
@@ -135,13 +132,10 @@ const Home = ({band, designer, allDesigners, setAllDesigners, allBands, setAllBa
     return (
       <>
         <div>
-          {/* <br /> */}
           <Divider horizontal style={{fontSize: 24}}>Welcome to Gig Prints</Divider>
-          {/* <br /> */}
           <div style={{backgroundColor:"#6834CC"}}>
             <Slideshow />
           </div>
-          {/* <br/> */}
           <Divider horizontal style={{fontSize: 20, marginBottom: "0px"}}>Discover - Connect - Create</Divider>
           <br/>
         </div>

@@ -1,11 +1,8 @@
 class Band < ApplicationRecord
   has_secure_password
 
-  # gives us band.posters instance method:
   has_many :posters, dependent: :destroy
   has_many :designers, through: :posters
-  has_many :chats
-  has_many :messages
 
   validates :name, presence: true, uniqueness: true
   validates :username, presence: true, uniqueness: true

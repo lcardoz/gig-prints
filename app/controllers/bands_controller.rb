@@ -33,5 +33,4 @@ class BandsController < ApplicationController
     params.permit(:name, :username, :password, :instagram, :website, :location, :image, :bio, :on_tour, :email)
   end
 
-
 end

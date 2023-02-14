@@ -71,7 +71,7 @@ const SignupDesigner = () => {
             <label>Password:</label>
             <input type="password" name="password" value={password} onChange={handleChange} />
           </Form.Field>
-          {errors ? errors.map((error, i)=><p key={i} >{error}</p>) : null}
+          {errors ? errors.map((error, i)=><p key={i} style={{color: "red"}} >{error}</p>) : null}
           <br /> 
           <Button type='submit' className="violet ui button">Signup</Button>
         </Form>
