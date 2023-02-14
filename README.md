@@ -16,10 +16,10 @@ Welcome to Gig Prints- a single-page web application where touring bands and pos
 ## Motivation
 I am an avid concert-goer and poster collector, and prior to becoming a software engineer, I spent my entire working career in different facets of the live music industry. As soon as I arrive at a concert, the first thing I do is visit the merch stand, hoping there is a cool limited edition poster for sale. I'd estimate that 8/10 concerts I attend do not have a poster for sale, which is a huge missed opportunity for everyone involved: the independent poster designer, who would have a chance to share their artistic vision with a whole new audience, the band, who would add a new revenue stream, and the fans, who would be able to own a unique, tangible piece of that special concert experience forever.
 
-> I decided to build a real-world web application to help bands discover the best poster designers from all over the world, to facilitate poster designers in showcasing their work and easily connecting with bands on tour, and to simplify and centralize the process of creating concert posters so that more poster designers are booked for poster projects, and more bands recognize the supply of talent that's available and feel compelled to respond to the demand and add concert posters to their merch offerings.
+I decided to build a real-world web application to help bands discover the best poster designers from all over the world, to facilitate poster designers in showcasing their work and easily connecting with bands on tour, and to simplify and centralize the process of creating concert posters so that more poster designers are booked for poster projects, and more bands recognize the supply of talent that's available and feel compelled to respond to the demand and add concert posters to their merch offerings.
 
 ## Demo
-[Gig Prints Demo](https://vimeo.com/798881890)
+[Gig Prints Video Demo](https://vimeo.com/798881890)
 
 ## Tech
 * Front End
