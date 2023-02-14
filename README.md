@@ -19,7 +19,7 @@ I am an avid concert-goer and poster collector, and prior to becoming a software
 > I decided to build a real-world web application to help bands discover the best poster designers from all over the world, to facilitate poster designers in showcasing their work and easily connecting with bands on tour, and to simplify and centralize the process of creating concert posters so that more poster designers are booked for poster projects, and more bands recognize the supply of talent that's available and feel compelled to respond to the demand and add concert posters to their merch offerings.
 
 ## Demo
-![Gig Prints Demo](https://vimeo.com/798881890)
+[Gig Prints Demo](https://vimeo.com/798881890)
 
 ## Tech
 * Front End
