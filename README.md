@@ -43,8 +43,11 @@ I decided to build a real-world web application to help bands discover the best 
 
 ## Usage
 
-* To start Rails server: rails s
-* To start local React server: npm start
+* To start Rails server: 
+  rails s
+* To start local React server: 
+  cd client
+  npm start
 
 ## Requirements
 
