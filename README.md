@@ -7,12 +7,10 @@ Welcome to Gig Prints- a single-page web application where touring bands and pos
 ## Table of Contents
 1. [Motivation](#Motivation)
 2. [Demo](#Demo)
-3. [Tech](#Tech)
-4. [Features](#Features)
-5. [How To Use](#How-To-Use)
-5. [Usage](#Usage)
-6. [Tech Requirements](#Tech-Requirements)
-7. [Installing Dependencies](#Installing-Dependencies)
+3. [Features](#Features)
+4. [How To Use](#How-To-Use)
+5. [Tech Stack & Requirements](#Tech-Stack-&-Requirements)
+6. [Getting Started](#Getting-Started)
 
 ## Motivation
 I am an avid concert-goer and poster collector, and prior to becoming a software engineer, I spent my entire working career in different facets of the live music industry. As soon as I arrive at a concert, the first thing I do is visit the merch stand, hoping there is a cool limited edition poster for sale. I'd estimate that 8/10 concerts I attend do not have a poster for sale, which is a huge missed opportunity for everyone involved: the independent poster designer, who would have a chance to share their artistic vision with a whole new audience, the band, who would add a new revenue stream, and the fans, who would be able to own a unique, tangible piece of that special concert experience forever.
@@ -21,14 +19,6 @@ I decided to build a real-world web application to help bands discover the best 
 
 ## Demo
 [Watch me demo the entire app here!](https://vimeo.com/798881890)
-
-## Tech
-
-> **Languages:** JavaScript | Ruby | HTML5 | CSS
-
-> **Frameworks:** React.js | Ruby on Rails
-
-> **Libraries:** React Router | Semantic UI
 
 ## Features
 
@@ -49,22 +39,13 @@ I decided to build a real-world web application to help bands discover the best 
 * After the band has agreed to the final image draft uploaded by the poster designer, they will mark the status of the project as "complete" and the completed poster will POST to both band and designer profiles under the "recent concert posters" section.
 * Both Bands and Designers have the ability to edit their profiles and edit a poster project, but only bands can create a new project or delete a project.
 
-## Usage
+## Tech Stack & Requirements
 
-1. Start rails server: 
-```sh
-rails s
-```
+> **Languages:** JavaScript | Ruby | HTML5 | CSS
 
-2. Start local react server: 
-```sh
-cd client
-```
-```sh
-npm start
-```
+> **Frameworks:** React.js | Ruby on Rails
 
-## Tech Requirements
+> **Libraries:** React Router | Semantic UI
 
 - react 18.2.0
 - react-router-dom 6.6.2
@@ -73,8 +54,22 @@ npm start
 - rails 7.0.4
 - npm 8.19.2
 
-### Installing Dependencies
+## Getting Started
 
+1. Install dependencies:
 ```sh
 npm install
+```
+
+2. Start rails server: 
+```sh
+rails s
+```
+
+3. Start local react server: 
+```sh
+cd client
+```
+```sh
+npm start
 ```
