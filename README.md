@@ -44,10 +44,18 @@ I decided to build a real-world web application to help bands discover the best 
 ## Usage
 
 * To start Rails server: 
-  rails s
+```sh
+rails s
+```
+
 * To start local React server: 
-  cd client
-  npm start
+```sh
+cd client
+```
+
+```sh
+npm start
+```
 
 ## Requirements
 
