@@ -5,13 +5,14 @@ Welcome to Gig Prints- a single-page web application where touring bands and pos
 > Please note all artwork, poster artist information, and band information are property of their rightful respective owner. Usage of band, poster artist, and poster images are for educational, non-commercial purposes only.
 
 ## Table of Contents
-1. [Motivation](#Demo)
-1. [Demo](#Demo)
-1. [Tech](#Tech)
-1. [Features](#Features)
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Installing Dependencies](#installing-dependencies)
+1. [Motivation](#Motivation)
+2. [Demo](#Demo)
+3. [Tech](#Tech)
+4. [Features](#Features)
+5. [How To Use](#How-To-Use)
+5. [Usage](#Usage)
+6. [Tech Requirements](#Tech-Requirements)
+7. [Installing Dependencies](#Installing-Dependencies)
 
 ## Motivation
 I am an avid concert-goer and poster collector, and prior to becoming a software engineer, I spent my entire working career in different facets of the live music industry. As soon as I arrive at a concert, the first thing I do is visit the merch stand, hoping there is a cool limited edition poster for sale. I'd estimate that 8/10 concerts I attend do not have a poster for sale, which is a huge missed opportunity for everyone involved: the independent poster designer, who would have a chance to share their artistic vision with a whole new audience, the band, who would add a new revenue stream, and the fans, who would be able to own a unique, tangible piece of that special concert experience forever.
@@ -22,17 +23,24 @@ I decided to build a real-world web application to help bands discover the best 
 [Watch me demo the entire app here!](https://vimeo.com/798881890)
 
 ## Tech
-* Front End
-  * React
-  * Semantic UI
-* Backend
-  * Ruby on Rails
+
+> **Languages:** JavaScript | Ruby | HTML5 | CSS
+
+> **Frameworks:** React.js | Ruby on Rails
+
+> **Libraries:** React Router | Semantic UI
 
 ## Features
 
-* Secure auth signup and login functionality for band and designer models using Rails bcrypt gem.
-* Utilized Semantic UI React components for user profile pages, band and designer homepages which include browsing, filtering and search features, and an updatable table for project and task management.
-* Live search queries database developed from scratch for band and poster designer information.
+* Secure authenticated & authorized signup/login/logout functionality for band and designer models using Rails bcrypt gem and sessions.
+* Semantic UI React components for user profile pages, band and designer homepages which include browsing, filtering and search features, and an editable table for project and task management.
+* CRUD actions for three models including a joiner, facilitated on the frontend and harnessed on the backend.
+* Live search queries the database, which is developed from scratch for band and poster designer data.
+* Carousel slideshow on Homepage showcasing site's main features.
+* Custom backend routes and react-router client-side routes.
+
+## How To Use
+
 * Bands can update whether they are on tour or not, and poster designers can update whether they are open to work or not.
 * Bands can filter out designers not open to work and designers can filter out bands who aren't touring.
 * To post any upcoming tour dates with open poster commissions to their profiles, Bands can create a new poster project on the "My Projects" page, add the relevant details such as concert date, location, and deadline, and mark the project as "unassigned" (only poster projects marked as "unassigned" will POST to the "Open Poster Commissions" section of the band's profile).
@@ -43,27 +51,26 @@ I decided to build a real-world web application to help bands discover the best 
 
 ## Usage
 
-* To start Rails server: 
+1. Start rails server: 
 ```sh
 rails s
 ```
 
-* To start local React server: 
+2. Start local react server: 
 ```sh
 cd client
 ```
-
 ```sh
 npm start
 ```
 
-## Requirements
+## Tech Requirements
 
 - react 18.2.0
 - react-router-dom 6.6.2
 - semantic-ui-react 2.1.4
-- Ruby 2.7.4p191
-- Rails 7.0.4
+- ruby 2.7.4p191
+- rails 7.0.4
 - npm 8.19.2
 
 ### Installing Dependencies
