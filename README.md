@@ -15,9 +15,9 @@ Welcome to Gig Prints- a single-page web application where touring bands and pos
 6. [Getting Started](#Getting-Started)
 
 ## Motivation
-I am an avid concert-goer and poster collector, and prior to becoming a software engineer, I spent my entire working career in different facets of the live music industry. As soon as I arrive at a concert, the first thing I do is visit the merch stand, hoping there is a cool limited edition poster for sale. I'd estimate that 8/10 concerts I attend do not have a poster for sale, which is a huge missed opportunity for everyone involved: the independent poster designer, who would have a chance to share their artistic vision with a whole new audience, the band, who would add a new revenue stream, and the fans, who would be able to own a unique, tangible piece of that special concert experience forever.
+I am an avid concert-goer and poster collector, and prior to becoming a software engineer, I spent my entire working career in different facets of the live music industry. As soon as I arrive at a concert, the first thing I do is visit the merch stand, hoping there is a cool limited edition poster for sale. Most concerts I attend do not have a poster for sale, which is a huge missed opportunity for everyone involved: the independent poster designer, who would have a chance to share their artistic vision with a whole new audience, the band, who would add a new revenue stream, and the fans, who would be able to own a unique, tangible piece of that special concert experience forever.
 
-I decided to build a real-world web application to help bands discover the best poster designers from all over the world, to facilitate poster designers in showcasing their work and easily connecting with bands on tour, and to simplify and centralize the process of creating concert posters so that more poster designers are booked for poster projects, and more bands recognize the supply of talent that's available and feel compelled to respond to the demand and add concert posters to their merch offerings.
+I decided to build a real-world web application to help bands discover the best poster designers from all over the world, to facilitate poster designers in showcasing their work and easily connecting with bands on tour, and to simplify and centralize the process of creating concert posters so that more poster designers are booked for poster projects and more bands recognize the supply of talent that's available and feel compelled to respond to the demand by adding concert posters to their merch offerings.
 
 ## Demo
 [Watch me demo the entire app here!](https://vimeo.com/798881890)
@@ -26,7 +26,7 @@ I decided to build a real-world web application to help bands discover the best 
 
 ![Landing Page Slideshow Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/c26c8b5f-f476-4331-a160-40221625d580.gif?ClientID=vimeo-core-prod&Date=1676757476&Signature=34b6a5bf18cd4c82a869f130185aa4617d665068)
 
-**Band Login**
+**Band Login / Band Home Page**
 
 ![Band Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/669ab696-0448-4e9f-a65c-22f5562c967b.gif?ClientID=vimeo-core-prod&Date=1676760070&Signature=f124afc176e9f4716c6db035c8b8e2743229e9b2)
 
