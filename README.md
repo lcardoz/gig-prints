@@ -20,6 +20,10 @@ I decided to build a real-world web application to help bands discover the best 
 ## Demo
 [Watch me demo the entire app here!](https://vimeo.com/798881890)
 
+**Landing Page**
+
+![Landing Page Slideshow Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/c26c8b5f-f476-4331-a160-40221625d580.gif?ClientID=vimeo-core-prod&Date=1676757476&Signature=34b6a5bf18cd4c82a869f130185aa4617d665068)
+
 ## Features
 
 * Secure authenticated & authorized signup/login/logout functionality for band and designer models using Rails bcrypt gem and sessions.
