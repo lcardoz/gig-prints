@@ -30,6 +30,23 @@ I decided to build a real-world web application to help bands discover the best 
 
 ![Band Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/669ab696-0448-4e9f-a65c-22f5562c967b.gif?ClientID=vimeo-core-prod&Date=1676760070&Signature=f124afc176e9f4716c6db035c8b8e2743229e9b2)
 
+**Band Profile**
+
+![Band Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/f62fcfc1-1004-428d-8ad3-3129cd2d8a64.gif?ClientID=vimeo-core-prod&Date=1677007700&Signature=4a442463d75ae71c64fafde62eedb5375cc02075)
+
+**My Projects**
+
+![My Projects Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/674f00ee-d838-4005-9b41-a0463d7e0a4d.gif?ClientID=vimeo-core-prod&Date=1677009136&Signature=0526d255d0faa36f9154d9c8f943a26e77886f5a)
+
+**Designer Login / Designer Home Page**
+
+![Designer Login Gif]()
+
+**Designer Profile**
+
+![Designer Profile Gif]()
+
+
 ## Features
 
 * Secure authenticated & authorized signup/login/logout functionality for band and designer models using Rails bcrypt gem and sessions.
