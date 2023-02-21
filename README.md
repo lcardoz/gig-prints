@@ -40,11 +40,15 @@ I decided to build a real-world web application to help bands discover the best 
 
 **Designer Login / Designer Home Page**
 
-![Designer Login Gif]()
+![Designer Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/7aca9d68-29c1-475f-bdc1-7a2d3a527733.gif?ClientID=vimeo-core-prod&Date=1677010202&Signature=5057bb13e408daaaaf65263e3699e3a9fd1a92cb)
 
 **Designer Profile**
 
-![Designer Profile Gif]()
+![Designer Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/82b7db44-e2cb-466f-8b10-eb5f7c9c0c13.gif?ClientID=vimeo-core-prod&Date=1677010800&Signature=28e9089b0f216541e546ee75c2dc92e3814b0cfe)
+
+**Edit Profile**
+
+![Edit Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/5cc57f0a-e474-40b9-878c-9dceb8300cdf.gif?ClientID=vimeo-core-prod&Date=1677010997&Signature=afac4d13d70403fecaafdd0c3ca312c4f956a14f)
 
 
 ## Features
