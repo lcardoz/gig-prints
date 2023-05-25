@@ -22,18 +22,6 @@ I decided to build a real-world web application to help bands discover the best 
 ## Demo
 [Watch me demo the entire app here!](https://vimeo.com/798881890)
 
-**Landing Page**
-
-![Landing Page Slideshow Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/c8bad448-cfb4-42aa-b151-251cf68681f6.gif?ClientID=vimeo-core-prod&Date=1685051585&Signature=7d7aabff2ca657bdca3d76431a6254dd56637fb3)
-
-**Band Login / Band Home Page**
-
-![Band Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/6a343da5-3c58-4cad-933a-77ab2eac1d66.gif?ClientID=vimeo-core-prod&Date=1685051980&Signature=91f8bff58f14f147be0dfb9b4e7be58ae2f05fa6)
-
-**Band Profile**
-
-![Band Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/375de5fa-3277-4495-b2e6-5d37ca71bd9a.gif?ClientID=vimeo-core-prod&Date=1685052398&Signature=503d11bb4783f818736e8b582c3682af903b49f7)
-
 **My Projects**
 
 ![My Projects Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/aee928fa-d0b4-44ef-addf-c160e9aa56da.gif?ClientID=vimeo-core-prod&Date=1685054065&Signature=17f0b3eebbb8251975fa80965c23d7829264e902)
