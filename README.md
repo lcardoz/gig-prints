@@ -24,31 +24,31 @@ I decided to build a real-world web application to help bands discover the best 
 
 **Landing Page**
 
-![Landing Page Slideshow Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/c8bad448-cfb4-42aa-b151-251cf68681f6.gif?ClientID=vimeo-core-prod&Date=1685051585&Signature=7d7aabff2ca657bdca3d76431a6254dd56637fb3)
+![Landing Page Slideshow Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/c8bad448-cfb4-42aa-b151-251cf68681f6.gif?ClientID=vimeo-core-prod&Date=1685055666&Signature=02b98664076fe76183362e4c134bfd3349e6ff2b)
 
 **Band Login / Band Home Page**
 
-![Band Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/6a343da5-3c58-4cad-933a-77ab2eac1d66.gif?ClientID=vimeo-core-prod&Date=1685051980&Signature=91f8bff58f14f147be0dfb9b4e7be58ae2f05fa6)
+![Band Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/6a343da5-3c58-4cad-933a-77ab2eac1d66.gif?ClientID=vimeo-core-prod&Date=1685055687&Signature=f34232e8821f6e46b1f1c354b591947b773ba1c6)
 
 **Band Profile**
 
-![Band Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/375de5fa-3277-4495-b2e6-5d37ca71bd9a.gif?ClientID=vimeo-core-prod&Date=1685052398&Signature=503d11bb4783f818736e8b582c3682af903b49f7)
+![Band Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/375de5fa-3277-4495-b2e6-5d37ca71bd9a.gif?ClientID=vimeo-core-prod&Date=1685055716&Signature=fa156449f6a0614920f3c5ea6fb9f46a9d143c3e)
 
 **My Projects**
 
-![My Projects Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/aee928fa-d0b4-44ef-addf-c160e9aa56da.gif?ClientID=vimeo-core-prod&Date=1685054065&Signature=17f0b3eebbb8251975fa80965c23d7829264e902)
+![My Projects Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/aee928fa-d0b4-44ef-addf-c160e9aa56da.gif?ClientID=vimeo-core-prod&Date=1685055733&Signature=ab9bcb3b1b995322ecb704615570cce5ae29b798)
 
 **Designer Login / Designer Home Page**
 
-![Designer Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/e67b28ea-fa9c-4885-965c-b0ea8bd2fca0.gif?ClientID=vimeo-core-prod&Date=1685054709&Signature=5e2d6f7612ca41f4546dac888f0fb4e6b6c857af)
+![Designer Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/e67b28ea-fa9c-4885-965c-b0ea8bd2fca0.gif?ClientID=vimeo-core-prod&Date=1685055752&Signature=dcebd62e5e5afdca04dc2ceb49bf72ab3ea80628)
 
 **Designer Profile**
 
-![Designer Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/e03a58e5-7d20-4ec3-ae26-50aa8bcb0281.gif?ClientID=vimeo-core-prod&Date=1685054930&Signature=2119947a3e4da81f94e2ac1c9f495042299400a8)
+![Designer Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/e03a58e5-7d20-4ec3-ae26-50aa8bcb0281.gif?ClientID=vimeo-core-prod&Date=1685055768&Signature=41a0ccaf9d71dd8c6fc83a8c38e82f9a21bd7dff)
 
 **Edit Profile**
 
-![Edit Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/0560bab7-fab4-4c81-bfd1-fe329b6a4621.gif?ClientID=vimeo-core-prod&Date=1685055288&Signature=0c3814e6bd559091b4f53c18b5e99988348f5d43)
+![Edit Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/0560bab7-fab4-4c81-bfd1-fe329b6a4621.gif?ClientID=vimeo-core-prod&Date=1685055783&Signature=601756cb71f0a7649c5cf418ad3d8fe93f6d6449)
 
 
 ## Features
