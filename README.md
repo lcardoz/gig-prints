@@ -24,7 +24,7 @@ I decided to build a real-world web application to help bands discover the best 
 
 **Landing Page**
 
-![Landing Page Slideshow Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/c8bad448-cfb4-42aa-b151-251cf68681f6.gif?ClientID=vimeo-core-prod&Date=1685055666&Signature=02b98664076fe76183362e4c134bfd3349e6ff2b)
+![Landing Page Slideshow Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/c8bad448-cfb4-42aa-b151-251cf68681f6.gif?ClientID=vimeo-core-prod&Date=1685055871&Signature=63e7d1af170d1fbacebd3fe55d9f5833c6c5f105)
 
 **Band Login / Band Home Page**
 
