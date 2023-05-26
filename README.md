@@ -40,7 +40,7 @@ I decided to build a real-world web application to help bands discover the best 
 
 **Designer Login / Designer Home Page**
 
-![Designer Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/e67b28ea-fa9c-4885-965c-b0ea8bd2fca0.gif?ClientID=vimeo-core-prod&Date=1685055752&Signature=dcebd62e5e5afdca04dc2ceb49bf72ab3ea80628)
+![Designer Login Gif](public/Designer-Login-Gif-Gig-Prints-high.gif)
 
 **Designer Profile**
 
