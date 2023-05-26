@@ -24,7 +24,7 @@ I decided to build a real-world web application to help bands discover the best 
 
 **Landing Page**
 
-![](public/LandingPageGif-Gig Prints-low.gif)
+![Landing Page Slideshow Gif](public/LandingPageGif-Gig-Prints-low.gif)
 
 **Band Login / Band Home Page**
 
