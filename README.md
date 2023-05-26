@@ -32,7 +32,7 @@ I decided to build a real-world web application to help bands discover the best 
 
 **Band Profile**
 
-![Band Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/375de5fa-3277-4495-b2e6-5d37ca71bd9a.gif?ClientID=vimeo-core-prod&Date=1685055716&Signature=fa156449f6a0614920f3c5ea6fb9f46a9d143c3e)
+![Band Profile Gif](public/Band-Profile-Gif-Gig-Prints-high.gif)
 
 **My Projects**
 
