@@ -44,7 +44,7 @@ I decided to build a real-world web application to help bands discover the best 
 
 **Designer Profile**
 
-![Designer Profile Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/e03a58e5-7d20-4ec3-ae26-50aa8bcb0281.gif?ClientID=vimeo-core-prod&Date=1685055768&Signature=41a0ccaf9d71dd8c6fc83a8c38e82f9a21bd7dff)
+![Designer Profile Gif](public/Designer-Profile-Gif-Gig-Prints-high.gif)
 
 **Edit Profile**
 
