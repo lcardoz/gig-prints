@@ -28,7 +28,7 @@ I decided to build a real-world web application to help bands discover the best 
 
 **Band Login / Band Home Page**
 
-![Band Login Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/6a343da5-3c58-4cad-933a-77ab2eac1d66.gif?ClientID=vimeo-core-prod&Date=1685055687&Signature=f34232e8821f6e46b1f1c354b591947b773ba1c6)
+![Band Login Gif](public/Band-Login-Gif-Gig-Prints-high.gif)
 
 **Band Profile**
 
