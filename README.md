@@ -36,7 +36,7 @@ I decided to build a real-world web application to help bands discover the best 
 
 **My Projects**
 
-![My Projects Gif](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/aee928fa-d0b4-44ef-addf-c160e9aa56da.gif?ClientID=vimeo-core-prod&Date=1685055733&Signature=ab9bcb3b1b995322ecb704615570cce5ae29b798)
+![My Projects Gif](public/My-Projects-Gif-Gig-Prints-high.gif)
 
 **Designer Login / Designer Home Page**
 
